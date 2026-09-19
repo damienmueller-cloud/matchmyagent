@@ -1,7 +1,8 @@
 # MatchMyAgent brand kit
 
-## Status
-**C3 ON HOLD** — Damien wants outline house with **windows/door** (reads as house, not arrow). Grok generating **C4**. Do not treat C3 as final.
+## Interim live (until Damien picks)
+**C3** — red outline house + wordmark (INTERIM)
 
-## Concepts on disk
-- C3-wordmark-red-house-outline.png (pending replace by C4)
+## Awaiting pick (do NOT apply yet)
+- **C4** flat windows: `logo-concepts/C4-wordmark-house-windows.png`
+- **C5** isometric: `logo-concepts/C5-wordmark-house-isometric.png`
