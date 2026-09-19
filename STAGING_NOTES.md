@@ -1,15 +1,15 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~18:16 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~18:20 AEST (Australia/Brisbane)  
 Folder: `/workspace/matchmyagent-godaddy/`  
 **Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
 
 ## Logo status (Damien 2026-09-19)
-- **C2 (solid red house + wordmark) REJECTED** — do not treat as locked.
-- **Waiting on C3** (red outline house): `brand/logo-concepts/C3-wordmark-red-house-outline.png`.
-- Commit `87775f5` briefly applied C2 to header/favicon/OG — **not final**; hold further logo/favicon/OG changes until C3 is approved and applied.
-- Concepts stay under `brand/logo-concepts/` for review. MatchMyAgent branding only — no Premier.
+- **LOCKED: C3** red outline house + wordmark — `brand/logo-concepts/C3-wordmark-red-house-outline.png` (applied in `9e79dfc`).
+- **C2 solid house REJECTED** — do not re-apply.
+- Header / favicon / apple-touch / OG use C3 (Mia). MatchMyAgent branding only — no Premier.
+- Concepts A–E + C2 remain under `brand/logo-concepts/` for history only.
 
 ## Widget mobile fix (shipped this pass)
 - **QA fail:** ElevenLabs convai widget overlaid stepper chips + enquire textarea at ~390px width.
@@ -40,11 +40,11 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - Mobile-first + LCP-aware (WEB_STANDARDS.md)
 - **Mobile widget clearance CSS shipped** (see above)
 
-## Brand kit (interim — pending C3)
+## Brand kit (locked C3)
 | Item | Status |
 |------|--------|
-| Wordmark / mark | C2 briefly on site — **rejected**; await C3 outline house |
-| Favicon / OG | Same hold — do not re-lock C2 |
+| Wordmark / mark | **C3** red outline house + wordmark (header `logo-img`) |
+| Favicon / OG | C3-derived (Mia `9e79dfc`) |
 | Colour tokens | Interim navy `#071b2b`, teal `#1fb8a5` / `#70e1d2`, cream `#f4f2eb`, coral `#ff6b4a` |
 | Fonts | Sora (headings) + Manrope (body) via Google Fonts |
 | Concepts | `brand/logo-concepts/` A–E + C2/C3 for partner review |
@@ -58,7 +58,7 @@ Folder: `/workspace/matchmyagent-godaddy/`
 ## Gaps / TBD
 | Gap | Owner / note |
 |-----|----------------|
-| **Final logo (C3)** | Damien — apply C3 when approved; do not ship C2 as locked |
+| **Final logo** | **C3 locked** (`9e79dfc`) — do not re-apply C2 |
 | **Domain purchase** | Ops — `matchmyagent.com.au` |
 | **GoDaddy hosting upload** | After domain owned |
 | **FormSubmit agent CC** | TBD — do not invent `_cc` list |
@@ -78,13 +78,13 @@ Root-absolute paths require serving from this folder root. Do not open as `file:
 - No Stripe / property payment flows
 - Do not modify `/workspace/first-pick-edu/` or `/workspace/first-pick-site/`
 - Do not buy domains or spend from this agent pass
-- Do not lock C2 (or any concept) as final until Damien confirms C3 (or chosen option)
+- Logo locked to **C3 outline**; do not re-apply C2 solid
 
 ## Sanity
 `rg -i 'FirstPick|First Pick|firstpickagent|Premier|Rodney|Vlado|premierestateagents' … --glob '*.html' --glob '*.css' --glob '*.js'`  
 Expect CLEAN on public pages (ignore “Port Stephens”; Manus matcher hostname OK).
 
 ## Ready for Grok re-QA
-- ElevenLabs mobile overlap CSS clearance shipped (chips + enquire tappable).
-- Logo: C2 rejected; wait C3 — do not re-QA as locked brand mark yet.
-- Soft-canonical `https://matchmyagent.com.au`; apex HTTP 200 observed.
+- ElevenLabs mobile overlap CSS clearance shipped (`--convai-clearance` / body padding-bottom; chips + enquire tappable).
+- Logo **C3 locked** (outline house) — not C2 solid.
+- Soft-canonical `https://matchmyagent.com.au`; apex HTTP 200 observed (do not enforce HTTPS).
