@@ -1,7 +1,8 @@
 /* MatchMyAgent — HTTP-safe ElevenLabs widget
    Voice (getUserMedia) needs HTTPS. On insecure contexts force text-only
    silently (no public SSL banner). When HTTPS is available, leave voice enabled.
-   Also forces navy/coral brand colours on every elevenlabs-convai embed. */
+   Also forces navy/coral brand colours on every elevenlabs-convai embed.
+   cache-bust: 2026-09-19-ssl-hint-off */
 (function () {
   var ORB1 = "#182868";
   var ORB2 = "#f85850";

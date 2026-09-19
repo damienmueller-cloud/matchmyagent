@@ -6,6 +6,10 @@ Folder: `/workspace/matchmyagent-godaddy/`
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
 
 
+## Manus matcher links removed (2026-09-19)
+- All `firstpickage-*.manus.space` public links → `/enquire.html` (or chat copy).
+- `secure-chat.js` cache-bust `?v=20260919d2`; injectHint confirmed absent on live+repo.
+
 ## SSL hint banner removed (2026-09-19)
 - Public “Text chat works… SSL finishes” banner stripped per Damien.
 - HTTP still forces text-only silently via `js/secure-chat.js`; no user-facing SSL copy.
