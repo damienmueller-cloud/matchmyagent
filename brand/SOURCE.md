@@ -1,9 +1,8 @@
 # MatchMyAgent brand kit
 
-## Locked logo (Damien 2026-09-19)
-**C2** — red house + MatchMyAgent wordmark + blue arc  
-Source: `logo-concepts/C2-wordmark-red-house.png`
+## Status
+**C2 solid-house ON HOLD** — Damien wants **red OUTLINE** house (stroke) like blue arc. Grok generating **C3**. Do not treat C2 as final.
 
-Applied: `logos/logo.png`, favicons, `og-cover.jpg`, `logo-primary.png`
-
-Positioning: Hunter/Newcastle **pilot**; Australia scale target.
+## Concepts
+- C2-wordmark-red-house.png (solid — superseded pending C3)
+- A–E prior options still in logo-concepts/

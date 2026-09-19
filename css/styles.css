@@ -553,3 +553,37 @@ a:hover { color: var(--gold); }
 .logo { display:inline-flex; align-items:center; text-decoration:none; }
 .logo-img { height:44px; width:auto; display:block; }
 @media (max-width:520px){ .logo-img{ height:36px; } }
+
+/* —— ElevenLabs convai widget: mobile clearance (QA 2026-09-19) ——
+   Floating widget (~bottom-right) was covering stepper chips + enquire
+   textarea around ~390px. Keep agent_7301m2wa5jx7f218s1knqk6ykewg;
+   give body + main scroll room so controls stay tappable. */
+:root {
+  --convai-clearance: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+}
+body {
+  padding-bottom: var(--convai-clearance);
+}
+@media (min-width: 640px) {
+  :root {
+    --convai-clearance: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+/* Extra room on short mobile viewports / form pages */
+@media (max-width: 430px) {
+  :root {
+    --convai-clearance: calc(6.25rem + env(safe-area-inset-bottom, 0px));
+  }
+  .site-footer {
+    padding-bottom: 1rem;
+  }
+  .stepper,
+  .form-card,
+  form[action*="formsubmit"] {
+    margin-bottom: 0.5rem;
+  }
+}
+elevenlabs-convai {
+  /* Ensure widget layer stays above chrome but doesn't steal layout */
+  z-index: 45;
+}
