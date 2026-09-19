@@ -93,3 +93,6 @@ Expect CLEAN on public pages (ignore “Port Stephens”; Manus matcher hostname
 - Stronger mobile `--convai-panel-clearance` on `#match-steps` / stepper / enquire
 - Embed: `variant="compact"` `dismissible="true"`
 - ElevenLabs widget compact + expandable mobile
+
+## National waitlist copy (2026-09-19)
+- Hunter = live pilot; other AU regions encouraged to register interest via stepper/enquire.
