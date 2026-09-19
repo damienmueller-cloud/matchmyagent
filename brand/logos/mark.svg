@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MatchMyAgent">
+  <rect width="64" height="64" rx="14" fill="#071b2b"/>
+  <path d="M14 46V18h8.2l9.8 18.6L41.8 18H50v28h-7.2V29.2L34.2 46h-4.4L21.2 29.2V46H14z" fill="#1fb8a5"/>
+</svg>

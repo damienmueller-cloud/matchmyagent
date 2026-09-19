@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Intended production host (GoDaddy): matchmyagent.com.au
+# Domain purchase pending — GoDaddy 402 payment block is ops (Mia/Damien), not a site-build blocker.
+Sitemap: https://matchmyagent.com.au/sitemap.xml

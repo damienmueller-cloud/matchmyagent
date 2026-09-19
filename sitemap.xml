@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Intended host: matchmyagent.com.au (purchase pending — Mia; 402 payment block on GoDaddy ops) -->
+  <url><loc>https://matchmyagent.com.au/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://matchmyagent.com.au/how-it-works.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://matchmyagent.com.au/enquire.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://matchmyagent.com.au/about.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/privacy.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://matchmyagent.com.au/thank-you.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/auction-vs-private-treaty-hunter.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/how-to-choose-a-selling-agent.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/hunter-local-market-faq.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/preparing-your-home-to-sell.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-apartments-units-newcastle.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-costs-and-timeline-hunter.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-in-cessnock.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-in-lake-macquarie.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-in-maitland.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-in-newcastle.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/selling-in-port-stephens.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/understanding-comparable-sales-hunter.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/what-happens-after-you-enquire-to-sell.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/guides/what-to-ask-at-an-appraisal.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/councils/cessnock.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/councils/lake-macquarie.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/councils/maitland.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/councils/newcastle.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://matchmyagent.com.au/councils/port-stephens.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+</urlset>
