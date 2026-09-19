@@ -372,3 +372,14 @@ a:hover { color: var(--gold); }
 @media (max-width: 420px) {
   .chat-stub span.chat-stub-label-full { display: none; }
 }
+
+
+/* Logo A — house match */
+.logo { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; }
+.logo-img { height: 40px; width: auto; display: block; border-radius: 6px; }
+.logo-lockup { display: flex; flex-direction: column; line-height: 1.15; font-weight: 700; color: inherit; }
+.logo-lockup span { font-size: .72rem; font-weight: 500; opacity: .85; letter-spacing: .02em; }
+@media (max-width: 520px) {
+  .logo-lockup { display: none; }
+  .logo-img { height: 36px; }
+}
