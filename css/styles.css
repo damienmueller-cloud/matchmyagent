@@ -549,3 +549,7 @@ a:hover { color: var(--gold); }
   .stepper { padding: 1.15rem 1rem 1.25rem; }
   .tap-grid { grid-template-columns: 1fr 1fr; }
 }
+
+.logo { display:inline-flex; align-items:center; text-decoration:none; }
+.logo-img { height:44px; width:auto; display:block; }
+@media (max-width:520px){ .logo-img{ height:36px; } }
