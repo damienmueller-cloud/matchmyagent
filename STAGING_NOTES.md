@@ -1,15 +1,17 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~18:30 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~18:45 AEST (Australia/Brisbane)  
 Folder: `/workspace/matchmyagent-godaddy/`  
 **Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
 
 ## Logo status (Damien 2026-09-19)
-- **LOCKED: C3** red outline house + wordmark — `brand/logo-concepts/C3-wordmark-red-house-outline.png` (applied in `9e79dfc`).
-- **C2 solid house REJECTED** — do not re-apply.
-- Header / favicon / apple-touch / OG use C3 (Mia). MatchMyAgent branding only — no Premier.
-- Concepts A–E + C2 remain under `brand/logo-concepts/` for history only.
+- **LOCKED: concept A** house-match + wordmark — `brand/logo-concepts/A-house-match.png` (+ `LOCKED-A-billpayer.jpg` same lock).
+- **C3 superseded** — do not re-apply C3 as primary. C2 solid remains rejected.
+- Header `brand/logos/logo.png`, favicon / apple-touch / mark-512 / OG use concept A. MatchMyAgent branding only — no Premier.
+- Colours: navy `#182868` (+ mid `#2a3f88`, alt `#101860`), coral `#f85850` (accent; `--gold`/`--gold-light` aliased to coral family), cream `#f4f2eb`, ink `#1a1a19`.
+- Widget (`agent_7301m2wa5jx7f218s1knqk6ykewg`): avatar/btn navy + coral accents confirmed via ElevenLabs MCP.
+- Concepts B–F + C2/C3 remain under `brand/logo-concepts/` for history only.
 
 ## Widget mobile fix (shipped this pass)
 - **QA fail:** ElevenLabs convai widget overlaid stepper chips + enquire textarea at ~390px width.
@@ -41,14 +43,14 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - Mobile-first + LCP-aware (WEB_STANDARDS.md)
 - **Mobile widget clearance CSS shipped** (see above)
 
-## Brand kit (locked C3)
+## Brand kit (locked concept A)
 | Item | Status |
 |------|--------|
-| Wordmark / mark | **C3** red outline house + wordmark (header `logo-img`) |
-| Favicon / OG | C3-derived (Mia `9e79dfc`) |
-| Colour tokens | Interim navy `#071b2b`, teal `#1fb8a5` / `#70e1d2`, cream `#f4f2eb`, coral `#ff6b4a` |
+| Wordmark / mark | **Concept A** navy/coral house-match + wordmark (header `logo-img`) |
+| Favicon / OG | A-derived house mark + cream OG |
+| Colour tokens | Navy `#182868` / mid `#2a3f88` / alt `#101860`, coral `#f85850` / light `#ff8a7a`, cream `#f4f2eb`, ink `#1a1a19` |
 | Fonts | Sora (headings) + Manrope (body) via Google Fonts |
-| Concepts | `brand/logo-concepts/` A–E + C2/C3 for partner review |
+| Concepts | `brand/logo-concepts/` A locked; B–F + C2/C3 archive |
 
 ## Done (site scaffold)
 - MVP: home, how-it-works, enquire (FormSubmit), about, privacy, thank-you, 404
@@ -59,7 +61,7 @@ Folder: `/workspace/matchmyagent-godaddy/`
 ## Gaps / TBD
 | Gap | Owner / note |
 |-----|----------------|
-| **Final logo** | **C3 locked** (`9e79dfc`) — do not re-apply C2 |
+| **Final logo** | **Concept A locked** — C3 superseded; do not re-apply C2 |
 | **Domain purchase** | Ops — `matchmyagent.com.au` |
 | **GoDaddy hosting upload** | After domain owned |
 | **FormSubmit agent CC** | TBD — do not invent `_cc` list |
@@ -79,7 +81,7 @@ Root-absolute paths require serving from this folder root. Do not open as `file:
 - No Stripe / property payment flows
 - Do not modify `/workspace/first-pick-edu/` or `/workspace/first-pick-site/`
 - Do not buy domains or spend from this agent pass
-- Logo locked to **C3 outline**; do not re-apply C2 solid
+- Logo locked to **concept A**; C3 superseded; do not re-apply C2 solid
 
 ## Sanity
 `rg -i 'FirstPick|First Pick|firstpickagent|Premier|Rodney|Vlado|premierestateagents' … --glob '*.html' --glob '*.css' --glob '*.js'`  
@@ -87,7 +89,7 @@ Expect CLEAN on public pages (ignore “Port Stephens”; Manus matcher hostname
 
 ## Ready for Grok re-QA
 - ElevenLabs mobile overlap CSS clearance shipped (`--convai-clearance` / body padding-bottom; chips + enquire tappable).
-- Logo **C3 locked** (outline house) — not C2 solid.
+- Logo **concept A locked** (navy/coral house-match) — C3 superseded; not C2 solid.
 - Soft-canonical `https://matchmyagent.com.au`; apex HTTP 200 observed (do not enforce HTTPS).
 
 ## Widget clearance re-fix (2026-09-19)
