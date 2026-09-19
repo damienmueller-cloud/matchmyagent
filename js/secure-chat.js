@@ -2,11 +2,18 @@
    Voice (getUserMedia) needs HTTPS. On insecure contexts force text-only
    silently (no public SSL banner). When HTTPS is available, leave voice enabled.
    Forces navy/coral brand via avatar image URL + shadowRoot CSS injection.
-   cache-bust: 2026-09-19-widget-brand-force */
+   cache-bust: 2026-09-20-githubio-paths */
 (function () {
   var ORB1 = "#182868";
   var ORB2 = "#f85850";
-  var AVATAR_URL = "https://matchmyagent.com.au/brand/logos/avatar-mark.png";
+  var AVATAR_URL = (function () {
+    try {
+      var base = location.pathname.indexOf("/matchmyagent/") === 0 ? "/matchmyagent" : "";
+      return base + "/brand/logos/avatar-mark.png";
+    } catch (e) {
+      return "/brand/logos/avatar-mark.png";
+    }
+  })();
   var BRAND_CSS =
     ":host, :root {\n" +
     "  --el-base: #f4f2eb !important;\n" +
