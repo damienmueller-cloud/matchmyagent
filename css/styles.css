@@ -600,3 +600,28 @@ body {
 elevenlabs-convai {
   z-index: 40;
 }
+
+/* HTTP chat hint — voice needs HTTPS */
+.mma-http-chat-hint {
+  position: fixed;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  z-index: 42;
+  max-width: 22rem;
+  margin-inline: auto;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.65rem;
+  background: var(--navy, #071b2b);
+  color: #fff;
+  font: 500 0.8rem/1.35 var(--font-body, Manrope, system-ui, sans-serif);
+  box-shadow: 0 8px 24px rgba(7, 27, 43, 0.25);
+  pointer-events: none;
+}
+@media (min-width: 640px) {
+  .mma-http-chat-hint {
+    left: auto;
+    right: 1rem;
+    margin-inline: 0;
+  }
+}

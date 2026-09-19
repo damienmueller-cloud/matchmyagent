@@ -1,6 +1,6 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~18:20 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~18:30 AEST (Australia/Brisbane)  
 Folder: `/workspace/matchmyagent-godaddy/`  
 **Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
@@ -23,13 +23,14 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - Earlier intermittent **400** on apex not reproduced this check; likely DNS/CNAME race or bare-host probe without Pages ready. **Do not enforce HTTPS** from this pass (cert/HSTS out of scope).
 - Soft-canonical remains `https://matchmyagent.com.au` in HTML; serving over HTTP OK for staging.
 
-## Geography strategy (Damien lock)
-- **PILOT** = Newcastle / Hunter NSW
-- **SCALE** = whole of Australia — architecture + copy must not paint into Newcastle-only forever
-- Hero: “Starting in Newcastle & the Hunter” + “Built to expand across Australia”
-- Steppers: reusable nationally (pilot options OK now + “More regions coming” / free-text suburb)
-- Guides/councils: Newcastle-first OK; label pilot / more regions coming
-- Avoid “we only serve Newcastle” absolute language
+## Geography strategy (Damien messaging lock — applied)
+- **PILOT** = Newcastle / Hunter NSW (live matching focus now)
+- **SCALE** = whole of Australia — soft CTA: register interest / enquire even outside Hunter
+- Hero: “Starting in Newcastle & the Hunter · Built to expand across Australia”
+- Stepper chip: “More regions coming — tell us where you are” → enquire interest path
+- Enquire: Hunter pilot options + “Other Australia — register interest” waitlist
+- About / how-it-works / FAQ / llms / footers: pilot + Australia-wide interest (not Newcastle-only forever)
+- Guides/councils: Newcastle-first OK; shared chrome says Hunter pilot · Australia-ready
 
 ## Interactive redesign (draft shipped)
 - Short ADHD-friendly home: 1-line headline, one primary CTA + soft secondary, chat hint bottom-right
@@ -96,3 +97,7 @@ Expect CLEAN on public pages (ignore “Port Stephens”; Manus matcher hostname
 
 ## National waitlist copy (2026-09-19)
 - Hunter = live pilot; other AU regions encouraged to register interest via stepper/enquire.
+
+## HTTP text-chat fallback (2026-09-19)
+- `js/secure-chat.js`: on insecure context set `override-text-only`, catch getUserMedia errors, show HTTPS hint.
+- Voice auto-returns when site is HTTPS.
