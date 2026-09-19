@@ -1,6 +1,6 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~15:45 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~17:50 AEST (Australia/Brisbane)  
 Folder: `/workspace/matchmyagent-godaddy/`  
 **Locked brand: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
@@ -26,7 +26,7 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - Guides + councils preserved; site-wide nav + sticky call bar
 - Canonicals / sitemap / robots / llms / FormSubmit `_next` → **matchmyagent.com.au**
 - `js/main.js` MatchMyAgent attribution only (no agent CC invented)
-- **Chat stub:** floating “Ask MatchMyAgent · chat soon” → enquire; ElevenLabs widget TBD (no SDK, no API keys)
+- **ElevenLabs chat (live):** public voice+text widget embed on all HTML pages — agent `agent_7301m2wa5jx7f218s1knqk6ykewg` (auth disabled; no API keys in site files)
 
 ## Gaps / TBD
 | Gap | Owner / note |
@@ -36,7 +36,7 @@ Folder: `/workspace/matchmyagent-godaddy/`
 | **FormSubmit agent CC** | TBD — do not invent `_cc` list |
 | **FormSubmit `_next`** | Points at `https://matchmyagent.com.au/thank-you.html` |
 | **Manus matcher** | Still linked as product reference (`firstpickage-*.manus.space`); don’t cancel until replaced |
-| **ElevenLabs chat** | Stub only; wire when Damien approves |
+| **ElevenLabs chat** | **Live** — `agent_7301m2wa5jx7f218s1knqk6ykewg`, voice+text, public widget via unpkg `@elevenlabs/convai-widget-embed` |
 | **GSC / GA4** | After domain live |
 
 ## How to preview locally
