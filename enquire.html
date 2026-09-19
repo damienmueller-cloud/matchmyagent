@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enquire / match | MatchMyAgent Hunter</title>
-  <meta name="description" content="Request an independent local agent match across five Hunter NSW councils.">
+  <title>Enquire / match | MatchMyAgent</title>
+  <meta name="description" content="Request an independent local agent match. Pilot: Newcastle & the Hunter — more regions coming.">
   <link rel="canonical" href="https://matchmyagent.com.au/enquire.html">
-  <meta property="og:title" content="Enquire / match | MatchMyAgent Hunter">
+  <meta property="og:title" content="Enquire / match | MatchMyAgent">
   <meta property="og:image" content="https://matchmyagent.com.au/brand/og-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://matchmyagent.com.au/brand/og-cover.jpg">
-  <meta property="og:description" content="Request an independent local agent match across five Hunter NSW councils.">
+  <meta property="og:description" content="Request an independent local agent match. Pilot: Newcastle & the Hunter — more regions coming.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://matchmyagent.com.au/enquire.html">
   <meta property="og:locale" content="en_AU">
@@ -30,7 +30,7 @@
 </head>
 <body>
 <div class="call-bar" role="complementary" aria-label="MatchMyAgent">
-  <span class="label">MatchMyAgent · Hunter NSW</span>
+  <span class="label">MatchMyAgent · Hunter pilot</span>
   <a href="/enquire.html">Enquire / match</a>
   <a href="https://firstpickage-7wvpzzoe.manus.space" rel="noopener">Open matcher</a>
 </div>
@@ -54,12 +54,13 @@
 <section class="page-hero"><div class="container">
   <p class="breadcrumb"><a href="/index.html">Home</a> / Enquire</p>
   <h1>Enquire / request a match</h1>
-  <p>Submit once with your council and suburb. MatchMyAgent will follow up — you connect with one selected matched agent.</p>
+  <p>Submit once with your area and suburb. Pilot coverage is Newcastle & the Hunter; tell us if you are elsewhere — more regions are coming.</p>
 </div></section>
 <section class="section"><div class="container" style="max-width:40rem">
   <div class="form-card">
     <h2>Match request</h2>
     <p class="form-note">Required fields marked. We do not process payments on this site.</p>
+    <p class="prefill-banner" id="prefill-banner" hidden>We prefilled your quick-match answers — edit anything before sending.</p>
     <form class="lead-form" action="https://formsubmit.co/damienmueller@gmail.com" method="POST">
       <input type="hidden" name="_next" value="https://matchmyagent.com.au/thank-you.html">
       <input type="hidden" name="_captcha" value="false">
@@ -82,14 +83,19 @@
       </div>
       <div class="form-row two">
         <div>
-          <label for="council">Council area *</label>
+          <label for="council">Area *</label>
           <select id="council" name="council" required>
             <option value="">Select…</option>
-            <option>Newcastle</option>
-            <option>Lake Macquarie</option>
-            <option>Maitland</option>
-            <option>Cessnock</option>
-            <option>Port Stephens</option>
+            <optgroup label="Hunter pilot">
+              <option>Newcastle</option>
+              <option>Lake Macquarie</option>
+              <option>Maitland</option>
+              <option>Cessnock</option>
+              <option>Port Stephens</option>
+            </optgroup>
+            <optgroup label="More regions">
+              <option value="Other / more regions">Other / more regions coming</option>
+            </optgroup>
           </select>
         </div>
         <div>
@@ -128,7 +134,7 @@
   <div class="container footer-grid">
     <div>
       <h3>MatchMyAgent</h3>
-      <p>Hunter-region real-estate <strong style="color:#a8e6dc">seller education</strong> and independent agent matching for Newcastle, Lake Macquarie, Maitland, Cessnock and Port Stephens.</p>
+      <p>Independent <strong style="color:#a8e6dc">seller education</strong> and agent matching. Pilot: Newcastle &amp; the Hunter. Built to expand across Australia.</p>
       <p style="margin-top:.75rem"><a href="https://firstpickage-7wvpzzoe.manus.space" rel="noopener">Interactive matcher</a></p>
     </div>
     <div>
@@ -142,7 +148,7 @@
       </ul>
     </div>
     <div>
-      <h3>Councils</h3>
+      <h3>Pilot areas</h3>
       <ul>
         <li><a href="/councils/newcastle.html">Newcastle</a></li>
         <li><a href="/councils/lake-macquarie.html">Lake Macquarie</a></li>
@@ -153,7 +159,7 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 MatchMyAgent. Hunter NSW.</span>
+    <span>© 2026 MatchMyAgent. Hunter pilot · Australia-ready.</span>
     <span>Educational content · not a property listing or payment service</span>
   </div>
 </footer>

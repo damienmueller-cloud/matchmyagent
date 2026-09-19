@@ -1,42 +1,55 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~17:50 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~18:20 AEST (Australia/Brisbane)  
 Folder: `/workspace/matchmyagent-godaddy/`  
-**Locked brand: MatchMyAgent**  
+**Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
 
-## Rename history (operator)
-- Formerly staged as FirstPick / firstpickagent.com.au under `/workspace/first-pick-godaddy/`.
-- **FirstPick brand pause resolved** — Mia/Damien locked **MatchMyAgent** + **matchmyagent.com.au**.
-- Hold `firstpickagent.com.au` permanently (do not use as production host).
-- Folder renamed to `matchmyagent-godaddy` after content rebrand.
+## Logo hold (Damien 2026-09-19)
+- **Logo A is NOT locked.** Damien reviewing 5 options with business partner (`brand/logo-concepts/` A–E).
+- Header = **text lockup** “MatchMyAgent” + tagline “Hunter pilot · Australia-ready”.
+- Do **not** apply A-house-match (or any concept) as final header/favicon/OG until Damien confirms.
+- Concepts stay under `brand/logo-concepts/` for review only.
 
-## Brand kit (locked interim)
+## Geography strategy (Damien lock)
+- **PILOT** = Newcastle / Hunter NSW
+- **SCALE** = whole of Australia — architecture + copy must not paint into Newcastle-only forever
+- Hero: “Starting in Newcastle & the Hunter” + “Built to expand across Australia”
+- Steppers: reusable nationally (pilot options OK now + “More regions coming” / free-text suburb)
+- Guides/councils: Newcastle-first OK; label pilot / more regions coming
+- Avoid “we only serve Newcastle” absolute language
+
+## Interactive redesign (draft shipped)
+- Short ADHD-friendly home: 1-line headline, one primary CTA + soft secondary, chat hint bottom-right
+- 3-step tap stepper (area → timeline → goal) → enquire prefill via `sessionStorage` + query params
+- Guides/councils as compact cards / expand-collapse (less essay prose on home)
+- FormSubmit enquire kept → `damienmueller@gmail.com`
+- ElevenLabs widget kept — agent `agent_7301m2wa5jx7f218s1knqk6ykewg`
+- Mobile-first + LCP-aware (WEB_STANDARDS.md)
+
+## Brand kit (interim — text lockup)
 | Item | Status |
 |------|--------|
-| Wordmark | Header text lockup **“MatchMyAgent”** (Sora) + tagline “Hunter matching · NSW” — **no FirstPick Manus PNG** |
-| Mark / favicon | Simple geometric **M** SVG (`favicon.svg`, `brand/logos/mark.svg`) + PNG/ICO — not Manus doc+magnifier |
+| Wordmark | Header text lockup **“MatchMyAgent”** (Sora) + “Hunter pilot · Australia-ready” |
+| Mark / favicon | Interim simple mark — **not** logo A until locked |
 | Colour tokens | Interim navy `#071b2b`, teal `#1fb8a5` / `#70e1d2`, cream `#f4f2eb`, coral `#ff6b4a` |
 | Fonts | Sora (headings) + Manrope (body) via Google Fonts |
-| Theme color | `#071b2b` meta |
-| Archived | Old Manus FirstPick mark under `brand/logos/_archived-firstpick-manus/` |
+| Concepts | `brand/logo-concepts/` A–E for partner review |
 
 ## Done (site scaffold)
-- MVP: home, how-it-works, enquire (FormSubmit → damienmueller@gmail.com), about, privacy, thank-you, 404
+- MVP: home, how-it-works, enquire (FormSubmit), about, privacy, thank-you, 404
 - Guides + councils preserved; site-wide nav + sticky call bar
 - Canonicals / sitemap / robots / llms / FormSubmit `_next` → **matchmyagent.com.au**
-- `js/main.js` MatchMyAgent attribution only (no agent CC invented)
-- **ElevenLabs chat (live):** public voice+text widget embed on all HTML pages — agent `agent_7301m2wa5jx7f218s1knqk6ykewg` (auth disabled; no API keys in site files)
+- **ElevenLabs chat (live):** agent `agent_7301m2wa5jx7f218s1knqk6ykewg`
 
 ## Gaps / TBD
 | Gap | Owner / note |
 |-----|----------------|
-| **Domain purchase** | Ops — `matchmyagent.com.au` (do not buy from this agent pass) |
-| **GoDaddy hosting upload** | After domain owned — upload this folder |
+| **Final logo** | Damien + partner — pick among A–E; do not ship until locked |
+| **Domain purchase** | Ops — `matchmyagent.com.au` |
+| **GoDaddy hosting upload** | After domain owned |
 | **FormSubmit agent CC** | TBD — do not invent `_cc` list |
-| **FormSubmit `_next`** | Points at `https://matchmyagent.com.au/thank-you.html` |
-| **Manus matcher** | Still linked as product reference (`firstpickage-*.manus.space`); don’t cancel until replaced |
-| **ElevenLabs chat** | **Live** — `agent_7301m2wa5jx7f218s1knqk6ykewg`, voice+text, public widget via unpkg `@elevenlabs/convai-widget-embed` |
+| **Manus matcher** | Still linked as product reference; don’t cancel until replaced |
 | **GSC / GA4** | After domain live |
 
 ## How to preview locally
@@ -52,13 +65,13 @@ Root-absolute paths require serving from this folder root. Do not open as `file:
 - No Stripe / property payment flows
 - Do not modify `/workspace/first-pick-edu/` or `/workspace/first-pick-site/`
 - Do not buy domains or spend from this agent pass
+- Do not lock logo A (or any concept) into header/favicon until Damien says so
 
 ## Sanity
 `rg -i 'FirstPick|First Pick|firstpickagent|Premier|Rodney|Vlado|premierestateagents' … --glob '*.html' --glob '*.css' --glob '*.js'`  
 Expect CLEAN on public pages (ignore “Port Stephens”; Manus matcher hostname OK).
 
 ## Ready for Grok re-QA
-- Brand lock applied across HTML/CSS/JS/sitemap/robots/llms.
+- Interactive less-text draft on home + enquire prefill.
+- Logo A hold respected (text lockup).
 - Soft-canonical `https://matchmyagent.com.au`.
-- Text lockup + M favicon in place; FirstPick Manus mark retired from UI.
-- **Ready for Grok re-QA** of staging at `/workspace/matchmyagent-godaddy/`.

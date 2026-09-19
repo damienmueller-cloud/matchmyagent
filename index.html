@@ -3,24 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MatchMyAgent — Find the right local agent | Hunter NSW</title>
-  <meta name="description" content="Independent agent matching and seller education for Newcastle, Lake Macquarie, Maitland, Cessnock and Port Stephens.">
+  <title>MatchMyAgent — Find the right local agent</title>
+  <meta name="description" content="Independent agent matching and seller education. Starting in Newcastle &amp; the Hunter — built to expand across Australia.">
   <link rel="canonical" href="https://matchmyagent.com.au/">
-  <meta property="og:title" content="MatchMyAgent — Find the right local agent | Hunter NSW">
-  <meta property="og:image" content="https://matchmyagent.com.au/brand/og-cover.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://matchmyagent.com.au/brand/og-cover.jpg">
-  <meta property="og:description" content="Independent agent matching and seller education for Newcastle, Lake Macquarie, Maitland, Cessnock and Port Stephens.">
+  <meta property="og:title" content="MatchMyAgent — Find the right local agent">
+  <meta property="og:description" content="Independent agent matching and seller education. Starting in Newcastle &amp; the Hunter — built to expand across Australia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://matchmyagent.com.au/">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/brand/logos/apple-touch.png">
-<meta name="theme-color" content="#071b2b">
+  <link rel="apple-touch-icon" href="/brand/logos/logo.png">
+  <meta name="theme-color" content="#071b2b">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,18 +27,17 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "MatchMyAgent",
-  "alternateName": "MatchMyAgent",
   "url": "https://matchmyagent.com.au/",
-  "description": "Hunter NSW seller education and independent real-estate agent matching across five councils.",
-  "areaServed": ["Newcastle", "Lake Macquarie", "Maitland", "Cessnock", "Port Stephens"]
+  "description": "Independent real-estate agent matching and seller education. Pilot: Newcastle & Hunter NSW. Built to expand across Australia.",
+  "areaServed": ["Newcastle", "Lake Macquarie", "Maitland", "Cessnock", "Port Stephens", "Australia"]
 }
 </script>
 </head>
 <body>
 <div class="call-bar" role="complementary" aria-label="MatchMyAgent">
-  <span class="label">MatchMyAgent · Hunter NSW</span>
+  <span class="label">MatchMyAgent · Hunter pilot</span>
   <a href="/enquire.html">Enquire / match</a>
-  <a href="https://firstpickage-7wvpzzoe.manus.space" rel="noopener">Open matcher</a>
+  <a href="#match-steps">Quick match</a>
 </div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -53,7 +48,7 @@
       <a href="/index.html">Home</a>
       <a href="/how-it-works.html">How it works</a>
       <a href="/guides/">Guides</a>
-      <a href="/index.html#councils">Councils</a>
+      <a href="/index.html#councils">Areas</a>
       <a href="/about.html">About</a>
       <a class="btn-nav" href="/enquire.html">Enquire</a>
     </nav>
@@ -61,27 +56,73 @@
 </header>
 <main id="main">
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">Newcastle · Lake Macquarie · Maitland · Cessnock · Port Stephens</p>
-      <h1>Find the right local selling agent — independently</h1>
-      <p class="lead">MatchMyAgent helps Hunter sellers learn how agent choice works, then request an independent match. One enquiry. One selected agent. Education first — no fake #1 awards.</p>
-      <ul class="hero-points">
-        <li>Five-council coverage across the Hunter</li>
-        <li>Practical seller guides before you commit</li>
-        <li>Enquire here or use the interactive matcher</li>
-      </ul>
-      <p style="display:flex;flex-wrap:wrap;gap:.75rem">
-        <a class="btn" href="/enquire.html" style="width:auto">Enquire / request a match</a>
-        <a class="btn btn-outline" href="/guides/">Browse seller guides</a>
-      </p>
-    </div>
-    <div class="card" style="align-self:start">
-      <h3>Ready to connect?</h3>
-      <p style="margin:.5rem 0 1rem">Tell us your council and suburb. We route your request through MatchMyAgent — you stay in control of the conversation.</p>
-      <a class="btn" href="/enquire.html">Start enquire form</a>
-      <p class="form-fine" style="margin-top:.75rem">Prefer the interactive matcher? <a href="https://firstpickage-7wvpzzoe.manus.space" rel="noopener">Open interactive matcher</a>.</p>
+<section class="hero hero-compact">
+  <div class="container">
+    <p class="eyebrow">Starting in Newcastle &amp; the Hunter · Built to expand across Australia</p>
+    <h1>Find the right local selling agent — independently</h1>
+    <p class="hero-actions">
+      <a class="btn" href="#match-steps">Start a quick match</a>
+      <a class="btn btn-outline" href="/guides/">Seller guides</a>
+    </p>
+    <p class="hero-chat-hint">Prefer to talk or type? Chat is bottom-right.</p>
+  </div>
+</section>
+
+<section class="section" id="match-steps">
+  <div class="container">
+    <h2 class="sr-only">Quick match</h2>
+    <div class="stepper" id="mma-stepper" data-mma-stepper>
+      <div class="stepper-progress" aria-hidden="true">
+        <span class="stepper-dot is-active" data-dot="1"></span>
+        <span class="stepper-dot" data-dot="2"></span>
+        <span class="stepper-dot" data-dot="3"></span>
+      </div>
+
+      <div class="stepper-panel is-active" data-step="1" role="group" aria-labelledby="step1-label">
+        <p class="stepper-label" id="step1-label"><span class="step-num">1</span> Where is the property?</p>
+        <p class="stepper-hint">Pilot areas first — more regions coming.</p>
+        <div class="tap-grid" role="listbox" aria-label="Area">
+          <button type="button" class="tap-chip" data-field="area" data-value="Newcastle">Newcastle</button>
+          <button type="button" class="tap-chip" data-field="area" data-value="Lake Macquarie">Lake Macquarie</button>
+          <button type="button" class="tap-chip" data-field="area" data-value="Maitland">Maitland</button>
+          <button type="button" class="tap-chip" data-field="area" data-value="Cessnock">Cessnock</button>
+          <button type="button" class="tap-chip" data-field="area" data-value="Port Stephens">Port Stephens</button>
+          <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Other / more regions">More regions coming</button>
+        </div>
+        <label class="stepper-suburb" for="step-suburb">Suburb (optional free text)
+          <input id="step-suburb" name="step_suburb" type="text" placeholder="e.g. Merewether or your suburb" autocomplete="address-level2">
+        </label>
+        <p class="stepper-nav">
+          <button type="button" class="btn" data-next disabled>Next</button>
+        </p>
+      </div>
+
+      <div class="stepper-panel" data-step="2" hidden role="group" aria-labelledby="step2-label">
+        <p class="stepper-label" id="step2-label"><span class="step-num">2</span> What’s your timeline?</p>
+        <div class="tap-grid" role="listbox" aria-label="Timeline">
+          <button type="button" class="tap-chip" data-field="timing" data-value="Ready now">Ready now</button>
+          <button type="button" class="tap-chip" data-field="timing" data-value="1–3 months">1–3 months</button>
+          <button type="button" class="tap-chip" data-field="timing" data-value="3–6 months">3–6 months</button>
+          <button type="button" class="tap-chip" data-field="timing" data-value="Just researching">Just researching</button>
+        </div>
+        <p class="stepper-nav">
+          <button type="button" class="btn btn-ghost" data-back>Back</button>
+          <button type="button" class="btn" data-next disabled>Next</button>
+        </p>
+      </div>
+
+      <div class="stepper-panel" data-step="3" hidden role="group" aria-labelledby="step3-label">
+        <p class="stepper-label" id="step3-label"><span class="step-num">3</span> What’s the goal?</p>
+        <div class="tap-grid" role="listbox" aria-label="Goal">
+          <button type="button" class="tap-chip" data-field="goal" data-value="Sell soon — match me an agent">Sell soon — match me</button>
+          <button type="button" class="tap-chip" data-field="goal" data-value="Compare agents / get advice">Compare / advice</button>
+          <button type="button" class="tap-chip" data-field="goal" data-value="Learn first — guides only">Learn first</button>
+        </div>
+        <p class="stepper-nav">
+          <button type="button" class="btn btn-ghost" data-back>Back</button>
+          <a class="btn" data-enquire href="/enquire.html">Enquire with these details</a>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -89,33 +130,46 @@
 <section class="section alt" id="value">
   <div class="container">
     <h2>Why MatchMyAgent</h2>
-    <p class="section-lead">Independent matching and clear education — so you shortlist on fit, not noise.</p>
-    <div class="grid-3">
-      <div class="card"><span class="step-num">1</span><h3>Learn first</h3><p>Guides on choosing an agent, appraisals, costs and local market questions across five councils.</p></div>
-      <div class="card"><span class="step-num">2</span><h3>One request</h3><p>Submit once with your council and locality. MatchMyAgent coordinates the next step with one matched agent.</p></div>
-      <div class="card"><span class="step-num">3</span><h3>Stay in control</h3><p>No Stripe checkout, no listing portal, no fake rankings — educational and match-oriented only.</p></div>
+    <div class="grid-3 compact-cards">
+      <div class="card card-compact"><span class="step-num">1</span><h3>Learn first</h3><p>Short guides before you commit.</p></div>
+      <div class="card card-compact"><span class="step-num">2</span><h3>One request</h3><p>One enquiry → one matched agent.</p></div>
+      <div class="card card-compact"><span class="step-num">3</span><h3>Stay in control</h3><p>No fake rankings. No payment portal.</p></div>
     </div>
-    <p style="margin-top:1.5rem"><a href="/how-it-works.html">See how it works →</a></p>
+    <p class="section-more"><a href="/how-it-works.html">How it works →</a></p>
   </div>
 </section>
 
 <section class="section" id="guides">
   <div class="container">
     <h2>Seller guides</h2>
-    <p class="section-lead">Practical topics for Hunter homeowners — written for MatchMyAgent readers.</p>
-    <div class="grid-3">
-      <a class="card" href="/guides/how-to-choose-a-selling-agent.html" style="text-decoration:none;color:inherit"><h3>How to choose a selling agent</h3><p>Fit, questions, red flags across five councils.</p></a>
-      <a class="card" href="/guides/preparing-your-home-to-sell.html" style="text-decoration:none;color:inherit"><h3>Preparing your home to sell</h3><p>Presentation and timing without overspending.</p></a>
-      <a class="card" href="/guides/hunter-local-market-faq.html" style="text-decoration:none;color:inherit"><h3>Hunter local market FAQ</h3><p>Appraisals, methods, and locality differences.</p></a>
+    <p class="pilot-badge">Pilot library · Hunter first · more regions coming</p>
+    <div class="faq compact-faq" id="guides-collapse">
+      <details open>
+        <summary>Top guides</summary>
+        <div class="chip-row">
+          <a class="mini-card" href="/guides/how-to-choose-a-selling-agent.html">Choose a selling agent</a>
+          <a class="mini-card" href="/guides/preparing-your-home-to-sell.html">Prepare your home</a>
+          <a class="mini-card" href="/guides/hunter-local-market-faq.html">Hunter market FAQ</a>
+          <a class="mini-card" href="/guides/what-to-ask-at-an-appraisal.html">Appraisal questions</a>
+        </div>
+      </details>
+      <details>
+        <summary>More topics</summary>
+        <div class="chip-row">
+          <a class="mini-card" href="/guides/selling-costs-and-timeline-hunter.html">Costs &amp; timeline</a>
+          <a class="mini-card" href="/guides/auction-vs-private-treaty-hunter.html">Auction vs private treaty</a>
+          <a class="mini-card" href="/guides/understanding-comparable-sales-hunter.html">Comparable sales</a>
+          <a class="mini-card" href="/guides/">All guides →</a>
+        </div>
+      </details>
     </div>
-    <p style="margin-top:1.25rem"><a href="/guides/">All guides →</a></p>
   </div>
 </section>
 
 <section class="section alt" id="councils">
   <div class="container">
-    <h2>Learn by council</h2>
-    <p class="section-lead">Education hubs for each of the five Hunter councils MatchMyAgent covers.</p>
+    <h2>Learn by area</h2>
+    <p class="pilot-badge">Hunter pilot councils · more regions coming</p>
     <div class="suburb-grid">
       <a class="suburb-chip" href="/councils/newcastle.html">Newcastle</a>
       <a class="suburb-chip" href="/councils/lake-macquarie.html">Lake Macquarie</a>
@@ -129,7 +183,7 @@
 <section class="cta-band">
   <div class="container">
     <h2>Request an independent agent match</h2>
-    <p>Hunter sellers · five councils · one selected agent</p>
+    <p>Starting in Newcastle &amp; the Hunter · built for Australia</p>
     <a class="btn" href="/enquire.html">Enquire now</a>
   </div>
 </section>
@@ -139,7 +193,7 @@
   <div class="container footer-grid">
     <div>
       <h3>MatchMyAgent</h3>
-      <p>Hunter-region real-estate <strong style="color:#a8e6dc">seller education</strong> and independent agent matching for Newcastle, Lake Macquarie, Maitland, Cessnock and Port Stephens.</p>
+      <p>Independent <strong style="color:#a8e6dc">seller education</strong> and agent matching. Pilot: Newcastle &amp; the Hunter. Built to expand across Australia.</p>
       <p style="margin-top:.75rem"><a href="https://firstpickage-7wvpzzoe.manus.space" rel="noopener">Interactive matcher</a></p>
     </div>
     <div>
@@ -153,7 +207,7 @@
       </ul>
     </div>
     <div>
-      <h3>Councils</h3>
+      <h3>Pilot areas</h3>
       <ul>
         <li><a href="/councils/newcastle.html">Newcastle</a></li>
         <li><a href="/councils/lake-macquarie.html">Lake Macquarie</a></li>
@@ -164,7 +218,7 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 MatchMyAgent. Hunter NSW.</span>
+    <span>© 2026 MatchMyAgent. Hunter pilot · Australia-ready.</span>
     <span>Educational content · not a property listing or payment service</span>
   </div>
 </footer>
