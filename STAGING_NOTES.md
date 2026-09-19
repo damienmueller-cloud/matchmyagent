@@ -5,6 +5,11 @@ Folder: `/workspace/matchmyagent-godaddy/`
 **Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
 
+
+## SSL hint banner removed (2026-09-19)
+- Public “Text chat works… SSL finishes” banner stripped per Damien.
+- HTTP still forces text-only silently via `js/secure-chat.js`; no user-facing SSL copy.
+
 ## Logo status (Damien 2026-09-19)
 - **LOCKED: concept A** house-match + wordmark — `brand/logo-concepts/A-house-match.png` (+ `LOCKED-A-billpayer.jpg` same lock).
 - **C3 superseded** — do not re-apply C3 as primary. C2 solid remains rejected.

@@ -1,6 +1,6 @@
 /* MatchMyAgent — HTTP-safe ElevenLabs widget
    Voice (getUserMedia) needs HTTPS. On insecure contexts force text-only
-   and surface a short hint. When HTTPS is available, leave voice enabled.
+   silently (no public SSL banner). When HTTPS is available, leave voice enabled.
    Also forces navy/coral brand colours on every elevenlabs-convai embed. */
 (function () {
   var ORB1 = "#182868";
@@ -54,16 +54,6 @@
     el.setAttribute("transcript", "true");
   }
 
-  function injectHint() {
-    if (document.getElementById("mma-http-chat-hint")) return;
-    var hint = document.createElement("div");
-    hint.id = "mma-http-chat-hint";
-    hint.setAttribute("role", "status");
-    hint.className = "mma-http-chat-hint";
-    hint.textContent =
-      "Text chat works now. Voice needs a secure (HTTPS) connection — coming when SSL finishes.";
-    document.body.appendChild(hint);
-  }
 
   function patchWidgets() {
     var secure = isSecure();
@@ -71,7 +61,6 @@
       applyBrandColors(el);
       if (!secure) applyTextOnly(el);
     });
-    if (!secure) injectHint();
   }
 
   /* Soften uncaught getUserMedia / undefined errors from the widget on HTTP */
