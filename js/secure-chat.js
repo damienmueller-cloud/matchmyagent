@@ -1,36 +1,28 @@
 /* MatchMyAgent — HTTP-safe ElevenLabs widget
    Voice (getUserMedia) needs HTTPS. On insecure contexts force text-only
    silently (no public SSL banner). When HTTPS is available, leave voice enabled.
-   Also forces navy/coral brand colours on every elevenlabs-convai embed.
-   cache-bust: 2026-09-19-ssl-hint-off */
+   Forces navy/coral brand via avatar image URL + shadowRoot CSS injection.
+   cache-bust: 2026-09-19-widget-brand-force */
 (function () {
   var ORB1 = "#182868";
   var ORB2 = "#f85850";
-  var OVERRIDE_CONFIG = JSON.stringify({
-    avatar: { type: "orb", color_1: ORB1, color_2: ORB2 },
-    bg_color: "#f4f2eb",
-    text_color: "#182868",
-    btn_color: "#182868",
-    btn_text_color: "#ffffff",
-    border_color: "#f85850",
-    focus_color: "#f85850",
-    styles: {
-      base: "#f4f2eb",
-      base_hover: "#ebe7dc",
-      base_active: "#e4dfd3",
-      base_border: "#f85850",
-      base_subtle: "#5a6570",
-      base_primary: "#182868",
-      accent: "#182868",
-      accent_hover: "#2a3f88",
-      accent_active: "#101860",
-      accent_border: "#182868",
-      accent_subtle: "#ff8a7a",
-      accent_primary: "#ffffff",
-      button_radius: 999,
-      compact_sheet_radius: 999
-    }
-  });
+  var AVATAR_URL = "https://matchmyagent.com.au/brand/logos/avatar-mark.png";
+  var BRAND_CSS =
+    ":host, :root {\n" +
+    "  --el-base: #f4f2eb !important;\n" +
+    "  --el-base-hover: #ebe7dc !important;\n" +
+    "  --el-base-active: #e4dfd3 !important;\n" +
+    "  --el-base-border: #182868 !important;\n" +
+    "  --el-base-subtle: #5a6570 !important;\n" +
+    "  --el-base-primary: #182868 !important;\n" +
+    "  --el-accent: #f85850 !important;\n" +
+    "  --el-accent-hover: #ff6f68 !important;\n" +
+    "  --el-accent-active: #d6453f !important;\n" +
+    "  --el-accent-border: #f85850 !important;\n" +
+    "  --el-accent-subtle: #ff8a7a !important;\n" +
+    "  --el-accent-primary: #ffffff !important;\n" +
+    "}";
+  var STYLE_ID = "mma-el-brand-force";
 
   function isSecure() {
     try {
@@ -43,10 +35,29 @@
     }
   }
 
+  function injectShadowBrand(el) {
+    try {
+      var root = el.shadowRoot;
+      if (!root) return false;
+      if (root.getElementById(STYLE_ID)) return true;
+      var style = document.createElement("style");
+      style.id = STYLE_ID;
+      style.textContent = BRAND_CSS;
+      root.appendChild(style);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   function applyBrandColors(el) {
+    el.setAttribute("avatar-image-url", AVATAR_URL);
     el.setAttribute("avatar-orb-color-1", ORB1);
     el.setAttribute("avatar-orb-color-2", ORB2);
-    el.setAttribute("override-config", OVERRIDE_CONFIG);
+    if (el.hasAttribute("override-config")) {
+      el.removeAttribute("override-config");
+    }
+    injectShadowBrand(el);
   }
 
   function applyTextOnly(el) {
@@ -54,7 +65,6 @@
     el.setAttribute("text-input", "true");
     el.setAttribute("transcript", "true");
   }
-
 
   function patchWidgets() {
     var secure = isSecure();
@@ -103,7 +113,18 @@
   } else {
     patchWidgets();
   }
-  /* Widget script is async — re-apply shortly after load */
+
+  /* Widget script is async — shadowRoot appears after custom element upgrades */
   setTimeout(patchWidgets, 500);
   setTimeout(patchWidgets, 2000);
+
+  try {
+    var mo = new MutationObserver(function () {
+      patchWidgets();
+    });
+    mo.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  } catch (e) {}
 })();

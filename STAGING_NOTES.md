@@ -1,6 +1,6 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~18:50 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~18:57 AEST (Australia/Brisbane)
 Folder: `/workspace/matchmyagent-godaddy/`  
 **Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
@@ -19,18 +19,15 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - **C3 superseded** — do not re-apply C3 as primary. C2 solid remains rejected.
 - Header `brand/logos/logo.png`, favicon / apple-touch / mark-512 / OG use concept A. MatchMyAgent branding only — no Premier.
 - Colours: navy `#182868` (+ mid `#2a3f88`, alt `#101860`), coral `#f85850` (accent; `--gold`/`--gold-light` aliased to coral family), cream `#f4f2eb`, ink `#1a1a19`.
-- Widget (`agent_7301m2wa5jx7f218s1knqk6ykewg`): API styles + HTML `avatar-orb-color-*` + `override-config` force navy/coral (concept A); see note below.
+- Widget (`agent_7301m2wa5jx7f218s1knqk6ykewg`): logo avatar + shadow CSS + orb fallbacks force navy/coral (concept A); see note below.
 - Concepts B–F + C2/C3 remain under `brand/logo-concepts/` for history only.
 
-## Widget styles API + HTML overrides (concept A — 2026-09-19 ~18:50 AEST)
-- **Issue:** ElevenLabs widget still rendered white/black on live site despite API `btn_color` / styles tokens.
-- **API:** Parent updating agent `agent_7301m2wa5jx7f218s1knqk6ykewg` platform widget styles (navy `#182868`, coral `#f85850`, cream `#f4f2eb`).
-- **HTML harden (this commit):** Every `<elevenlabs-convai>` embed site-wide now includes:
-  - `avatar-orb-color-1="#182868"` / `avatar-orb-color-2="#f85850"`
-  - `override-config` JSON with avatar orb + `bg_color` / `btn_color` / `styles` token map (cream base, navy accent, coral borders)
-  - Kept `variant="compact"` `dismissible="true"` + existing agent-id
-- **JS belt-and-suspenders:** `js/secure-chat.js` re-`setAttribute`s orb colours + `override-config` on all embeds after load (does not change HTTP text-only logic).
-- Concept A logo + no-pilot public copy unchanged.
+## Widget navy/coral force (concept A — 2026-09-19 ~18:57 AEST)
+- **Issue:** ElevenLabs widget still showed teal orb + black/white UI despite API styles + prior `override-config` (override was replacing server fetch).
+- **API:** Parent updating agent `agent_7301m2wa5jx7f218s1knqk6ykewg` avatar to type **image** + coral accent styles.
+- **HTML:** Every `<elevenlabs-convai>` now has `avatar-image-url="https://matchmyagent.com.au/brand/logos/avatar-mark.png"` + orb colour fallbacks; **`override-config` removed**.
+- **JS:** `js/secure-chat.js` (`?v=20260919w3`) sets avatar-image-url + orb colours, removes override-config, injects brand CSS into each element's `shadowRoot` (`--el-base*` / `--el-accent*`) via MutationObserver + 500/2000ms retries. Silent HTTP text-only kept (no injectHint / SSL banner).
+- **Asset:** `brand/logos/avatar-mark.png` shipped for Pages.
 
 ## Widget mobile fix (shipped this pass)
 - **QA fail:** ElevenLabs convai widget overlaid stepper chips + enquire textarea at ~390px width.
