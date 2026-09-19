@@ -88,3 +88,8 @@ Expect CLEAN on public pages (ignore “Port Stephens”; Manus matcher hostname
 - ElevenLabs mobile overlap CSS clearance shipped (`--convai-clearance` / body padding-bottom; chips + enquire tappable).
 - Logo **C3 locked** (outline house) — not C2 solid.
 - Soft-canonical `https://matchmyagent.com.au`; apex HTTP 200 observed (do not enforce HTTPS).
+
+## Widget clearance re-fix (2026-09-19)
+- Stronger mobile `--convai-panel-clearance` on `#match-steps` / stepper / enquire
+- Embed: `variant="compact"` `dismissible="true"`
+- ElevenLabs widget compact + expandable mobile

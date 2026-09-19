@@ -554,36 +554,49 @@ a:hover { color: var(--gold); }
 .logo-img { height:44px; width:auto; display:block; }
 @media (max-width:520px){ .logo-img{ height:36px; } }
 
-/* —— ElevenLabs convai widget: mobile clearance (QA 2026-09-19) ——
-   Floating widget (~bottom-right) was covering stepper chips + enquire
-   textarea around ~390px. Keep agent_7301m2wa5jx7f218s1knqk6ykewg;
-   give body + main scroll room so controls stay tappable. */
+/* —— ElevenLabs convai widget: mobile clearance (QA re-fail 2026-09-19) ——
+   Expanded panel still covered home stepper chips at ~390px.
+   Stronger clearance + stepper pad; widget stays agent_7301m2wa5jx7f218s1knqk6ykewg. */
 :root {
-  --convai-clearance: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  --convai-clearance: calc(7rem + env(safe-area-inset-bottom, 0px));
+  --convai-panel-clearance: calc(18rem + env(safe-area-inset-bottom, 0px));
 }
 body {
   padding-bottom: var(--convai-clearance);
 }
 @media (min-width: 640px) {
   :root {
-    --convai-clearance: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+    --convai-clearance: calc(5rem + env(safe-area-inset-bottom, 0px));
+    --convai-panel-clearance: calc(8rem + env(safe-area-inset-bottom, 0px));
   }
 }
-/* Extra room on short mobile viewports / form pages */
-@media (max-width: 430px) {
+/* Phone: expanded "Need help?" panel is tall — pad interactive regions */
+@media (max-width: 480px) {
   :root {
-    --convai-clearance: calc(6.25rem + env(safe-area-inset-bottom, 0px));
+    --convai-clearance: calc(9rem + env(safe-area-inset-bottom, 0px));
+    --convai-panel-clearance: min(48vh, 22rem);
   }
-  .site-footer {
-    padding-bottom: 1rem;
+  body {
+    padding-bottom: calc(var(--convai-panel-clearance) + 1rem);
   }
+  #match-steps,
   .stepper,
   .form-card,
+  form.lead-form,
   form[action*="formsubmit"] {
-    margin-bottom: 0.5rem;
+    padding-bottom: var(--convai-panel-clearance);
+    scroll-margin-bottom: var(--convai-panel-clearance);
+  }
+  .tap-chip,
+  .stepper .tap-chip,
+  .stepper-panel .tap-chip {
+    position: relative;
+    z-index: 2;
+  }
+  .site-footer {
+    padding-bottom: 2rem;
   }
 }
 elevenlabs-convai {
-  /* Ensure widget layer stays above chrome but doesn't steal layout */
-  z-index: 45;
+  z-index: 40;
 }
