@@ -1,6 +1,6 @@
 # MatchMyAgent GoDaddy staging — notes
 
-Updated: 2026-09-19 ~18:45 AEST (Australia/Brisbane)  
+Updated: 2026-09-19 ~18:50 AEST (Australia/Brisbane)  
 Folder: `/workspace/matchmyagent-godaddy/`  
 **Locked brand name: MatchMyAgent**  
 **Soft-canonical / intended domain: `https://matchmyagent.com.au`**
@@ -10,8 +10,18 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - **C3 superseded** — do not re-apply C3 as primary. C2 solid remains rejected.
 - Header `brand/logos/logo.png`, favicon / apple-touch / mark-512 / OG use concept A. MatchMyAgent branding only — no Premier.
 - Colours: navy `#182868` (+ mid `#2a3f88`, alt `#101860`), coral `#f85850` (accent; `--gold`/`--gold-light` aliased to coral family), cream `#f4f2eb`, ink `#1a1a19`.
-- Widget (`agent_7301m2wa5jx7f218s1knqk6ykewg`): avatar/btn navy + coral accents confirmed via ElevenLabs MCP.
+- Widget (`agent_7301m2wa5jx7f218s1knqk6ykewg`): API styles + HTML `avatar-orb-color-*` + `override-config` force navy/coral (concept A); see note below.
 - Concepts B–F + C2/C3 remain under `brand/logo-concepts/` for history only.
+
+## Widget styles API + HTML overrides (concept A — 2026-09-19 ~18:50 AEST)
+- **Issue:** ElevenLabs widget still rendered white/black on live site despite API `btn_color` / styles tokens.
+- **API:** Parent updating agent `agent_7301m2wa5jx7f218s1knqk6ykewg` platform widget styles (navy `#182868`, coral `#f85850`, cream `#f4f2eb`).
+- **HTML harden (this commit):** Every `<elevenlabs-convai>` embed site-wide now includes:
+  - `avatar-orb-color-1="#182868"` / `avatar-orb-color-2="#f85850"`
+  - `override-config` JSON with avatar orb + `bg_color` / `btn_color` / `styles` token map (cream base, navy accent, coral borders)
+  - Kept `variant="compact"` `dismissible="true"` + existing agent-id
+- **JS belt-and-suspenders:** `js/secure-chat.js` re-`setAttribute`s orb colours + `override-config` on all embeds after load (does not change HTTP text-only logic).
+- Concept A logo + no-pilot public copy unchanged.
 
 ## Widget mobile fix (shipped this pass)
 - **QA fail:** ElevenLabs convai widget overlaid stepper chips + enquire textarea at ~390px width.
