@@ -1,8 +1,8 @@
 # MatchMyAgent brand kit
 
-## Status
-**C2 solid-house ON HOLD** — Damien wants **red OUTLINE** house (stroke) like blue arc. Grok generating **C3**. Do not treat C2 as final.
+## Locked logo (Damien 2026-09-19)
+**C3** — red OUTLINE house + MatchMyAgent wordmark + blue arc  
+Source: `logo-concepts/C3-wordmark-red-house-outline.png`  
+(Not solid C2.)
 
-## Concepts
-- C2-wordmark-red-house.png (solid — superseded pending C3)
-- A–E prior options still in logo-concepts/
+Applied: `logos/logo.png`, favicons, `og-cover.jpg`, `logo-primary.png`
