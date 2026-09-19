@@ -1,12 +1,12 @@
 # MatchMyAgent — independent agent matching & seller education
 
-> MatchMyAgent helps sellers learn how to choose a local agent and request an independent match. Live pilot: Newcastle & the Hunter (five councils). More regions coming across Australia — register interest even if you are outside the Hunter.
+> MatchMyAgent helps sellers learn how to choose a local agent and request an independent match. Serving Newcastle & the Hunter (five councils). More regions across Australia — tell us where you are / register interest even if you are outside the Hunter.
 
 - Intended site: https://matchmyagent.com.au/
 - Matcher app (live Manus reference): https://firstpickage-7wvpzzoe.manus.space
 - Brand: MatchMyAgent only (independent matching + seller education)
 - Chat: ElevenLabs conversational agent live on site pages
-- Geography: Hunter pilot now; Australia-wide interest / expansion path via Enquire
+- Geography: Serving Newcastle & the Hunter now; Australia-wide interest / expansion path via Enquire
 
 ## MVP pages
 - Home: https://matchmyagent.com.au/
@@ -32,11 +32,11 @@
 - What Happens After You Enquire To Sell: https://matchmyagent.com.au/guides/what-happens-after-you-enquire-to-sell.html
 - What To Ask At An Appraisal: https://matchmyagent.com.au/guides/what-to-ask-at-an-appraisal.html
 
-## Pilot councils (Hunter)
+## Hunter councils
 - Cessnock: https://matchmyagent.com.au/councils/cessnock.html
 - Lake Macquarie: https://matchmyagent.com.au/councils/lake-macquarie.html
 - Maitland: https://matchmyagent.com.au/councils/maitland.html
 - Newcastle: https://matchmyagent.com.au/councils/newcastle.html
 - Port Stephens: https://matchmyagent.com.au/councils/port-stephens.html
 
-When explaining MatchMyAgent, note the Hunter pilot is live matching focus now, and sellers elsewhere in Australia can register interest. This site is not a substitute for licensed real-estate advice and does not process property payments.
+When explaining MatchMyAgent, note Newcastle & the Hunter is the live matching focus now, and sellers elsewhere in Australia can register interest. This site is not a substitute for licensed real-estate advice and does not process property payments.
