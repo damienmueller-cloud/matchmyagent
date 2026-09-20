@@ -1,43 +1,19 @@
-# MatchMyAgent — independent agent matching & seller education
+# MatchMyAgent — find a local real estate agent
 
-> MatchMyAgent helps sellers learn how to choose a local agent and request an independent match. Serving Australia — find the right local agent anywhere in Australia. Soft invite: all regions welcome. Hunter NSW councils appear as example education coverage.
+> Selling your house? We’ll find you a local real estate agent. Free for sellers. Works anywhere in Australia. Tell us your suburb — we connect you with one agent who can help you sell.
 
 - Intended site: https://matchmyagent.com.au/
-- Matcher app (live Manus reference): https://firstpickage-7wvpzzoe.manus.space
-- Brand: MatchMyAgent only (independent matching + seller education)
-- Chat: ElevenLabs conversational agent live on site pages
-- Geography: Serving Australia from the start; soft invite all regions; Hunter NSW as example coverage
+- Brand: MatchMyAgent (plain language for sellers; membership page for agents at /agents.html)
+- Chat: ElevenLabs conversational agent on site pages
+- Geography: Australia-wide from the start
 
 ## MVP pages
 - Home: https://matchmyagent.com.au/
 - How it works: https://matchmyagent.com.au/how-it-works.html
-- Enquire / match (anywhere in Australia): https://matchmyagent.com.au/enquire.html
-- For agents (membership / founding cohort): https://matchmyagent.com.au/agents.html
+- Find me an agent: https://matchmyagent.com.au/enquire.html
+- For agents (membership): https://matchmyagent.com.au/agents.html
 - About: https://matchmyagent.com.au/about.html
 - Privacy: https://matchmyagent.com.au/privacy.html
 
 ## Guides
 - Index: https://matchmyagent.com.au/guides/
-- Auction Vs Private Treaty Hunter: https://matchmyagent.com.au/guides/auction-vs-private-treaty-hunter.html
-- How To Choose A Selling Agent: https://matchmyagent.com.au/guides/how-to-choose-a-selling-agent.html
-- Hunter Local Market Faq: https://matchmyagent.com.au/guides/hunter-local-market-faq.html
-- Preparing Your Home To Sell: https://matchmyagent.com.au/guides/preparing-your-home-to-sell.html
-- Selling Apartments Units Newcastle: https://matchmyagent.com.au/guides/selling-apartments-units-newcastle.html
-- Selling Costs And Timeline Hunter: https://matchmyagent.com.au/guides/selling-costs-and-timeline-hunter.html
-- Selling In Cessnock: https://matchmyagent.com.au/guides/selling-in-cessnock.html
-- Selling In Lake Macquarie: https://matchmyagent.com.au/guides/selling-in-lake-macquarie.html
-- Selling In Maitland: https://matchmyagent.com.au/guides/selling-in-maitland.html
-- Selling In Newcastle: https://matchmyagent.com.au/guides/selling-in-newcastle.html
-- Selling In Port Stephens: https://matchmyagent.com.au/guides/selling-in-port-stephens.html
-- Understanding Comparable Sales Hunter: https://matchmyagent.com.au/guides/understanding-comparable-sales-hunter.html
-- What Happens After You Enquire To Sell: https://matchmyagent.com.au/guides/what-happens-after-you-enquire-to-sell.html
-- What To Ask At An Appraisal: https://matchmyagent.com.au/guides/what-to-ask-at-an-appraisal.html
-
-## Example coverage — Hunter NSW councils
-- Cessnock: https://matchmyagent.com.au/councils/cessnock.html
-- Lake Macquarie: https://matchmyagent.com.au/councils/lake-macquarie.html
-- Maitland: https://matchmyagent.com.au/councils/maitland.html
-- Newcastle: https://matchmyagent.com.au/councils/newcastle.html
-- Port Stephens: https://matchmyagent.com.au/councils/port-stephens.html
-
-When explaining MatchMyAgent, lead with Serving Australia — find the right local agent anywhere in Australia. Do not describe MatchMyAgent as a Newcastle-only or Hunter-first product. Hunter / Newcastle may appear only as example markets — never as the product identity. This site is not a substitute for licensed real-estate advice and does not process property payments.
