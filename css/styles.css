@@ -602,3 +602,225 @@ elevenlabs-convai {
   z-index: 40;
 }
 
+
+/* —— For Agents membership —— */
+.audience-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  padding: .25rem;
+  margin: 0 0 1.25rem;
+}
+.audience-toggle a {
+  color: #dce6f0;
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 600;
+  padding: .45rem 1rem;
+  border-radius: 999px;
+}
+.audience-toggle a:hover { color: var(--gold-light); }
+.audience-toggle a.is-active {
+  background: var(--gold);
+  color: var(--navy);
+}
+.audience-toggle a.is-active:hover { color: var(--navy); }
+
+.firewall-banner {
+  background: var(--white);
+  border: 2px solid var(--coral);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+.firewall-banner h2 {
+  margin: 0 0 .5rem;
+  color: var(--navy);
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+}
+.firewall-banner .tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--coral);
+  font-size: 1.15rem;
+  margin: 0 0 .75rem;
+}
+.firewall-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: .45rem;
+}
+.firewall-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.firewall-list li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-weight: 700;
+}
+
+.plan-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 860px) {
+  .plan-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+}
+.plan-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.35rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.plan-card.featured {
+  border-color: var(--coral);
+  box-shadow: 0 10px 36px rgba(248, 88, 80, 0.18);
+  position: relative;
+}
+.plan-card .plan-badge {
+  position: absolute;
+  top: -.7rem;
+  right: 1rem;
+  background: var(--coral);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+}
+.plan-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.2rem;
+}
+.plan-card .plan-price {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.45rem;
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0;
+}
+.plan-card .plan-price span {
+  display: block;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: .2rem;
+}
+.plan-card .plan-audience {
+  font-size: .85rem;
+  color: var(--muted);
+  margin: 0;
+}
+.plan-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+.plan-card ul li {
+  position: relative;
+  padding: .3rem 0 .3rem 1.35rem;
+  color: var(--ink);
+  font-size: .92rem;
+}
+.plan-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-weight: 700;
+}
+.plan-card .btn {
+  width: 100%;
+  margin-top: .5rem;
+}
+.plan-card .btn-ghost-plan {
+  background: transparent;
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.plan-card .btn-ghost-plan:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.founding-band {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+}
+.founding-band h2 { color: #fff; margin: 0 0 .5rem; }
+.founding-band p { color: #d7e2ee; margin: 0 0 .75rem; }
+.founding-band ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: .45rem;
+}
+.founding-band li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: #e8eef5;
+  font-size: .95rem;
+}
+.founding-band li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.workspace-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 720px) {
+  .workspace-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.workspace-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+}
+.workspace-item h3 {
+  margin: 0 0 .35rem;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+.workspace-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.call-bar .audience-chip {
+  border-color: var(--gold);
+  background: rgba(248,88,80,.15);
+  color: var(--gold-light);
+}
+.call-bar .audience-chip:hover {
+  background: var(--gold);
+  color: var(--navy);
+}

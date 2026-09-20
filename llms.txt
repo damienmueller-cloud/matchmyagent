@@ -12,6 +12,7 @@
 - Home: https://matchmyagent.com.au/
 - How it works: https://matchmyagent.com.au/how-it-works.html
 - Enquire / match (incl. register interest outside Hunter): https://matchmyagent.com.au/enquire.html
+- For agents (membership / founding cohort): https://matchmyagent.com.au/agents.html
 - About: https://matchmyagent.com.au/about.html
 - Privacy: https://matchmyagent.com.au/privacy.html
 
