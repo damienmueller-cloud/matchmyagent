@@ -119,6 +119,12 @@ a:hover { color: var(--gold); }
   font-weight: 600; text-decoration: none;
 }
 .nav .btn-nav:hover { background: var(--gold-light); color: var(--navy); }
+.nav .nav-agents {
+  color: #8a96a8;
+  font-size: .8rem;
+  opacity: .85;
+}
+.nav .nav-agents:hover { color: #b8c4d4; opacity: 1; }
 .menu-toggle {
   display: none; background: transparent; border: 1px solid var(--gold); color: var(--gold-light);
   padding: .4rem .7rem; border-radius: 8px; cursor: pointer;
@@ -130,6 +136,14 @@ a:hover { color: var(--gold); }
 }
 
 /* Hero */
+.hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  color: #e8eef6;
+  max-width: 36rem;
+  margin: .85rem 0 1.25rem;
+  font-weight: 500;
+}
 .hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #243a7a 100%);
   color: var(--white);
