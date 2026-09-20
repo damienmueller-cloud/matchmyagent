@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=20260920au2">
+  <link rel="stylesheet" href="css/styles.css?v=20260920au3">
   
 </head>
 <body>
@@ -55,7 +55,7 @@
 <section class="page-hero"><div class="container">
   <p class="breadcrumb"><a href="index.html">Home</a> / Enquire</p>
   <h1>Enquire / request a match</h1>
-  <p>Serving Australia — tell us your suburb anywhere in the country. Soft invite: all regions welcome. Example markets include Newcastle & the Hunter.</p>
+  <p>Serving Australia — tell us your suburb anywhere in the country. Example markets are optional.</p>
 </div></section>
 <section class="section"><div class="container" style="max-width:40rem">
   <div class="form-card">
@@ -82,27 +82,22 @@
         <label for="email">Email *</label>
         <input id="email" name="email" type="email" required autocomplete="email">
       </div>
-      <div class="form-row two">
-        <div>
-          <label for="council">Area *</label>
-          <select id="council" name="council" required>
-            <option value="">Select…</option>
-            <optgroup label="Example — Hunter NSW">
-              <option>Newcastle</option>
-              <option>Lake Macquarie</option>
-              <option>Maitland</option>
-              <option>Cessnock</option>
-              <option>Port Stephens</option>
-            </optgroup>
-            <optgroup label="Anywhere in Australia">
-              <option value="Other Australia">Anywhere else in Australia</option>
-            </optgroup>
-          </select>
-        </div>
-        <div>
-          <label for="suburb">Suburb / locality *</label>
-          <input id="suburb" name="suburb" type="text" required placeholder="e.g. Merewether, or your suburb (any AU city)">
-        </div>
+      <div class="form-row">
+        <label for="suburb">Suburb anywhere in Australia *</label>
+        <input id="suburb" name="suburb" type="text" required placeholder="e.g. Bondi, Geelong, Fremantle, Cairns…" autocomplete="address-level2">
+      </div>
+      <div class="form-row">
+        <label for="council">Example market <span class="label-optional">(optional)</span></label>
+        <select id="council" name="council">
+          <option value="">Skip — suburb above is enough</option>
+          <optgroup label="Example markets">
+            <option>Newcastle</option>
+            <option>Lake Macquarie</option>
+            <option>Maitland</option>
+            <option>Cessnock</option>
+            <option>Port Stephens</option>
+          </optgroup>
+        </select>
       </div>
       <div class="form-row">
         <label for="timing">Selling timeframe</label>
@@ -165,7 +160,7 @@
     <span>Educational content · not a property listing or payment service</span>
   </div>
 </footer>
-<script src="js/main.js?v=20260920au1" defer></script>
+<script src="js/main.js?v=20260920au3" defer></script>
 <!-- MatchMyAgent ElevenLabs voice+text chat — agent_7301m2wa5jx7f218s1knqk6ykewg -->
 <elevenlabs-convai agent-id="agent_7301m2wa5jx7f218s1knqk6ykewg" variant="compact" dismissible="true" avatar-image-url="brand/logos/avatar-mark.png" avatar-orb-color-1="#182868" avatar-orb-color-2="#f85850"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>

@@ -213,6 +213,7 @@ a:hover { color: var(--gold); }
 }
 .form-card h2 { color: var(--navy); font-size: 1.35rem; margin: 0 0 .35rem; }
 .form-card .form-note { color: var(--muted); font-size: .88rem; margin: 0 0 1.1rem; }
+.label-optional { font-weight: 500; color: var(--muted); font-size: .85em; }
 .form-row { margin-bottom: .9rem; }
 .form-row label {
   display: block; font-size: .82rem; font-weight: 600; color: var(--navy); margin-bottom: .3rem;

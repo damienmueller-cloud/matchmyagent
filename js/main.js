@@ -152,7 +152,7 @@
   function step1Ready() {
     var suburbEl = document.getElementById("step-suburb");
     if (suburbEl) state.suburb = suburbEl.value.trim();
-    return state.suburb.length >= 2 || !!state.area;
+    return state.suburb.length >= 2;
   }
 
   function updateNextEnabled() {
