@@ -572,10 +572,10 @@ body {
   }
 }
 /* Phone: expanded "Need help?" panel is tall — pad interactive regions */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   :root {
     --convai-clearance: calc(9rem + env(safe-area-inset-bottom, 0px));
-    --convai-panel-clearance: min(48vh, 22rem);
+    --convai-panel-clearance: min(52vh, 24rem);
   }
   body {
     padding-bottom: calc(var(--convai-panel-clearance) + 1rem);
@@ -584,9 +584,27 @@ body {
   .stepper,
   .form-card,
   form.lead-form,
-  form[action*="formsubmit"] {
+  form[action*="formsubmit"],
+  #apply,
+  #apply .form-card,
+  #apply form.lead-form {
     padding-bottom: var(--convai-panel-clearance);
     scroll-margin-bottom: var(--convai-panel-clearance);
+  }
+  /* Keep consent + submit tappable above floating convai on /agents */
+  #apply form.lead-form .form-row:has(input[type="checkbox"]),
+  #apply form.lead-form button[type="submit"] {
+    position: relative;
+    z-index: 2;
+  }
+  #apply form.lead-form button[type="submit"] {
+    margin-bottom: 0.5rem;
+  }
+  #apply form.lead-form::after {
+    content: "";
+    display: block;
+    height: var(--convai-clearance);
+    min-height: 5.5rem;
   }
   .tap-chip,
   .stepper .tap-chip,
