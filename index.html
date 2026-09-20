@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=20260920agents1">
+  <link rel="stylesheet" href="css/styles.css?v=20260920au2">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,18 +85,21 @@
 
       <div class="stepper-panel is-active" data-step="1" role="group" aria-labelledby="step1-label">
         <p class="stepper-label" id="step1-label"><span class="step-num">1</span> Where is the property?</p>
-        <p class="stepper-hint">Serving Australia — pick an example Hunter market or tell us your suburb anywhere in Australia.</p>
-        <div class="tap-grid" role="listbox" aria-label="Area">
-          <button type="button" class="tap-chip" data-field="area" data-value="Newcastle">Newcastle</button>
-          <button type="button" class="tap-chip" data-field="area" data-value="Lake Macquarie">Lake Macquarie</button>
-          <button type="button" class="tap-chip" data-field="area" data-value="Maitland">Maitland</button>
-          <button type="button" class="tap-chip" data-field="area" data-value="Cessnock">Cessnock</button>
-          <button type="button" class="tap-chip" data-field="area" data-value="Port Stephens">Port Stephens</button>
-          <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Other Australia">Anywhere else in Australia</button>
-        </div>
-        <label class="stepper-suburb" for="step-suburb">Suburb (optional free text)
-          <input id="step-suburb" name="step_suburb" type="text" placeholder="e.g. Merewether, or your suburb anywhere in Australia" autocomplete="address-level2">
+        <p class="stepper-hint">Serving Australia — type your suburb or city anywhere in Australia.</p>
+        <label class="stepper-suburb stepper-suburb-primary" for="step-suburb">Suburb or city *
+          <input id="step-suburb" name="step_suburb" type="text" required placeholder="e.g. Bondi, Geelong, Fremantle, Cairns…" autocomplete="address-level2" enterkeyhint="next">
         </label>
+        <details class="stepper-examples">
+          <summary>Optional: quick-pick example markets</summary>
+          <p class="stepper-hint stepper-hint-tight">Examples only — not required. Prefer typing your suburb above.</p>
+          <div class="tap-grid tap-grid-demoted" role="listbox" aria-label="Example markets">
+            <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Newcastle">Newcastle</button>
+            <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Lake Macquarie">Lake Macquarie</button>
+            <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Maitland">Maitland</button>
+            <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Cessnock">Cessnock</button>
+            <button type="button" class="tap-chip tap-chip-soft" data-field="area" data-value="Port Stephens">Port Stephens</button>
+          </div>
+        </details>
         <p class="stepper-nav">
           <button type="button" class="btn" data-next disabled>Next</button>
         </p>
@@ -228,7 +231,7 @@
     <span>Educational content · not a property listing or payment service</span>
   </div>
 </footer>
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=20260920au1" defer></script>
 <!-- MatchMyAgent ElevenLabs voice+text chat — agent_7301m2wa5jx7f218s1knqk6ykewg -->
 <elevenlabs-convai agent-id="agent_7301m2wa5jx7f218s1knqk6ykewg" variant="compact" dismissible="true" avatar-image-url="brand/logos/avatar-mark.png" avatar-orb-color-1="#182868" avatar-orb-color-2="#f85850"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>

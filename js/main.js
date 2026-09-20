@@ -149,12 +149,18 @@
     });
   }
 
+  function step1Ready() {
+    var suburbEl = document.getElementById("step-suburb");
+    if (suburbEl) state.suburb = suburbEl.value.trim();
+    return state.suburb.length >= 2 || !!state.area;
+  }
+
   function updateNextEnabled() {
     var panel = root.querySelector('.stepper-panel[data-step="' + step + '"]');
     if (!panel) return;
     var nextBtn = panel.querySelector("[data-next]");
     if (!nextBtn) return;
-    var ok = step === 1 ? !!state.area : step === 2 ? !!state.timing : true;
+    var ok = step === 1 ? step1Ready() : step === 2 ? !!state.timing : true;
     nextBtn.disabled = !ok;
   }
 
@@ -167,7 +173,7 @@
     if (state.suburb) q.set("suburb", state.suburb);
     if (state.timing) q.set("timing", state.timing);
     if (state.goal) q.set("goal", state.goal);
-    return "/enquire.html?" + q.toString();
+    return "enquire.html?" + q.toString();
   }
 
   root.addEventListener("click", function (e) {
@@ -177,6 +183,13 @@
       var value = chip.getAttribute("data-value") || "";
       if (!field) return;
       state[field] = value;
+      if (field === "area") {
+        var suburbEl = document.getElementById("step-suburb");
+        if (suburbEl && !suburbEl.value.trim()) {
+          suburbEl.value = value;
+          state.suburb = value;
+        }
+      }
       var panel = chip.closest(".stepper-panel");
       panel.querySelectorAll('.tap-chip[data-field="' + field + '"]').forEach(function (c) {
         c.classList.toggle("is-selected", c === chip);
@@ -193,7 +206,8 @@
     if (e.target.closest("[data-next]")) {
       var suburbEl = document.getElementById("step-suburb");
       if (suburbEl) state.suburb = suburbEl.value.trim();
-      if (step === 1 && !state.area) return;
+      if (step === 1 && !step1Ready()) return;
+      if (step === 1 && state.suburb && !state.area) state.area = "Other Australia";
       if (step === 2 && !state.timing) return;
       showStep(Math.min(3, step + 1));
       updateNextEnabled();
@@ -214,6 +228,14 @@
   if (suburbInput) {
     suburbInput.addEventListener("input", function () {
       state.suburb = suburbInput.value.trim();
+      updateNextEnabled();
+    });
+    suburbInput.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter" && step1Ready()) {
+        ev.preventDefault();
+        var nextBtn = root.querySelector('.stepper-panel[data-step="1"] [data-next]');
+        if (nextBtn && !nextBtn.disabled) nextBtn.click();
+      }
     });
   }
 

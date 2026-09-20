@@ -842,3 +842,57 @@ elevenlabs-convai {
   background: var(--gold);
   color: var(--navy);
 }
+
+
+/* Australia-first stepper: suburb primary, example chips demoted */
+.stepper-suburb-primary {
+  display: block;
+  margin: 0 0 1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.stepper-suburb-primary input {
+  margin-top: .4rem;
+  font-size: 1.05rem;
+  padding: .85rem 1rem;
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+}
+.stepper-suburb-primary input:focus {
+  outline: 2px solid var(--coral);
+  outline-offset: 1px;
+  border-color: var(--coral);
+}
+.stepper-examples {
+  margin: 0 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--cream-alt);
+  padding: .35rem .85rem .85rem;
+}
+.stepper-examples summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--muted);
+  padding: .55rem 0;
+  list-style: none;
+}
+.stepper-examples summary::-webkit-details-marker { display: none; }
+.stepper-examples summary::before {
+  content: "+ ";
+  color: var(--coral);
+  font-weight: 700;
+}
+.stepper-examples[open] summary::before { content: "− "; }
+.stepper-hint-tight {
+  margin: 0 0 .65rem;
+  font-size: .82rem;
+}
+.tap-grid-demoted {
+  opacity: 0.92;
+}
+.tap-grid-demoted .tap-chip {
+  font-size: .85rem;
+  padding: .55rem .7rem;
+}
