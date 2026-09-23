@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=20260920plain1">
+  <link rel="stylesheet" href="css/styles.css?v=20260923rodney1">
   
 </head>
 <body>
@@ -100,18 +100,65 @@
         </select>
       </div>
       <div class="form-row">
-        <label for="timing">Selling timeframe</label>
+        <label for="timing">When might you sell? <span class="label-optional">(helps match)</span></label>
         <select id="timing" name="timing">
           <option value="">Select…</option>
-          <option>Ready now</option>
           <option>1–3 months</option>
           <option>3–6 months</option>
+          <option>6–12 months</option>
           <option>Just researching</option>
         </select>
       </div>
+      <details class="lead-extra" open>
+        <summary>Property details <span class="label-optional">(optional — makes a hotter lead for your agent)</span></summary>
+        <div class="lead-extra-body">
+          <div class="form-row">
+            <label for="property_address">Property address <span class="label-optional">(owner’s address)</span></label>
+            <input id="property_address" name="property_address" type="text" placeholder="Street address if you’re happy to share" autocomplete="street-address">
+          </div>
+          <div class="form-row two">
+            <div>
+              <label for="bedrooms">Bedrooms</label>
+              <select id="bedrooms" name="bedrooms">
+                <option value="">Select…</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+            <div>
+              <label for="pool">Pool</label>
+              <select id="pool" name="pool">
+                <option value="">Select…</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row two">
+            <div>
+              <label for="reno_status">Renovated?</label>
+              <select id="reno_status" name="reno_status">
+                <option value="">Select…</option>
+                <option>Renovated</option>
+                <option>Partly renovated</option>
+                <option>Unrenovated / original</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+            <div>
+              <label for="price_expectation">Price expectation</label>
+              <input id="price_expectation" name="price_expectation" type="text" placeholder="e.g. mid $1m / open to advice" inputmode="text">
+            </div>
+          </div>
+        </div>
+      </details>
       <div class="form-row">
-        <label for="message">Anything we should know?</label>
-        <textarea id="message" name="message" rows="4" placeholder="Property type, city/state, questions, preferred contact time…"></textarea>
+        <label for="message">Anything else?</label>
+        <textarea id="message" name="message" rows="3" placeholder="Questions, preferred contact time…"></textarea>
       </div>
       <div class="form-row">
         <label style="font-weight:500;display:flex;gap:.5rem;align-items:flex-start">
@@ -160,7 +207,7 @@
     <span>Not a property listing site · no payments on this site</span>
   </div>
 </footer>
-<script src="js/main.js?v=20260920plain1" defer></script>
+<script src="js/main.js?v=20260923rodney1" defer></script>
 <!-- MatchMyAgent ElevenLabs voice+text chat — agent_7301m2wa5jx7f218s1knqk6ykewg -->
 <elevenlabs-convai agent-id="agent_7301m2wa5jx7f218s1knqk6ykewg" variant="compact" dismissible="true" avatar-image-url="brand/logos/avatar-mark.png" avatar-orb-color-1="#182868" avatar-orb-color-2="#f85850"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
