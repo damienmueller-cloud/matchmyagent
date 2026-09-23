@@ -25,6 +25,11 @@
       suburb: param("suburb") || "",
       timing: param("timing") || "",
       goal: param("goal") || "",
+      bedrooms: param("bedrooms") || "",
+      pool: param("pool") || "",
+      reno_status: param("reno_status") || "",
+      property_address: param("property_address") || "",
+      price_expectation: param("price_expectation") || "",
     };
     var stored = {};
     try {
@@ -35,6 +40,11 @@
       suburb: q.suburb || stored.suburb || "",
       timing: q.timing || stored.timing || "",
       goal: q.goal || stored.goal || "",
+      bedrooms: q.bedrooms || stored.bedrooms || "",
+      pool: q.pool || stored.pool || "",
+      reno_status: q.reno_status || stored.reno_status || "",
+      property_address: q.property_address || stored.property_address || "",
+      price_expectation: q.price_expectation || stored.price_expectation || "",
     };
   }
 
@@ -73,10 +83,15 @@
     select.value = value;
   }
 
+  function setInputValue(el, value) {
+    if (!el || !value) return;
+    el.value = value;
+  }
+
   /* Enquire form: attribution + stepper/query prefill */
   document.querySelectorAll("form.lead-form").forEach(function (form) {
-    ensureHidden(form, "lead_source", "MatchMyAgent — matchmyagent.com.au staging");
-    ensureHidden(form, "attribution", "Lead from MatchMyAgent site (matchmyagent.com.au / local staging)");
+    ensureHidden(form, "lead_source", "MatchMyAgent — matchmyagent.com.au");
+    ensureHidden(form, "attribution", "Lead from MatchMyAgent site (matchmyagent.com.au)");
     ensureHidden(form, "referred_by", "MatchMyAgent");
     ensureHidden(form, "_subject", "MatchMyAgent match enquire");
 
@@ -86,12 +101,12 @@
       utm_campaign: param("utm_campaign"),
       utm_content: param("utm_content"),
       utm_term: param("utm_term"),
-      source: param("utm_source") || "matchmyagent-godaddy",
+      source: param("utm_source") || "matchmyagent-site",
       page: window.location.href,
       user_agent: navigator.userAgent.slice(0, 240),
     };
     Object.keys(map).forEach(function (k) {
-      ensureHidden(form, k, map[k] || (k === "source" ? "matchmyagent-godaddy" : ""));
+      ensureHidden(form, k, map[k] || (k === "source" ? "matchmyagent-site" : ""));
     });
 
     var pre = readPrefill();
@@ -99,15 +114,35 @@
     var suburb = form.querySelector("#suburb, [name='suburb']");
     var timing = form.querySelector("#timing, [name='timing']");
     var message = form.querySelector("#message, [name='message']");
+    var bedrooms = form.querySelector("#bedrooms, [name='bedrooms']");
+    var pool = form.querySelector("#pool, [name='pool']");
+    var reno = form.querySelector("#reno_status, [name='reno_status']");
+    var address = form.querySelector("#property_address, [name='property_address']");
+    var price = form.querySelector("#price_expectation, [name='price_expectation']");
     var banner = document.getElementById("prefill-banner");
 
     if (pre.area) setSelectValue(council, pre.area);
     if (pre.suburb && suburb) suburb.value = pre.suburb;
     if (pre.timing) setSelectValue(timing, pre.timing);
+    if (pre.bedrooms) setSelectValue(bedrooms, pre.bedrooms);
+    if (pre.pool) setSelectValue(pool, pre.pool);
+    if (pre.reno_status) setSelectValue(reno, pre.reno_status);
+    setInputValue(address, pre.property_address);
+    setInputValue(price, pre.price_expectation);
     if (pre.goal && message && !message.value) message.value = "Goal: " + pre.goal;
     if (pre.goal) ensureHidden(form, "goal", pre.goal);
 
-    if (pre.area || pre.suburb || pre.timing || pre.goal) {
+    var hasPrefill =
+      pre.area ||
+      pre.suburb ||
+      pre.timing ||
+      pre.goal ||
+      pre.bedrooms ||
+      pre.pool ||
+      pre.reno_status ||
+      pre.property_address ||
+      pre.price_expectation;
+    if (hasPrefill) {
       ensureHidden(form, "stepper_prefill", "yes");
       if (banner) banner.hidden = false;
     }
@@ -115,7 +150,9 @@
     form.addEventListener("submit", function () {
       try {
         var data = {};
-        new FormData(form).forEach(function (v, k) { data[k] = v; });
+        new FormData(form).forEach(function (v, k) {
+          data[k] = v;
+        });
         data.timestamp = new Date().toISOString();
         data.vault_note = "browser mirror — authoritative copy also FormSubmit email";
         var key = "mma_leads_mirror";
@@ -126,11 +163,20 @@
     });
   });
 
-  /* Home 3-step tap stepper */
+  /* Home tap stepper (4 steps; step 3 property optional/skippable) */
   var root = document.querySelector("[data-mma-stepper]");
   if (!root) return;
 
-  var state = { area: "", suburb: "", timing: "", goal: "" };
+  var MAX_STEP = 4;
+  var state = {
+    area: "",
+    suburb: "",
+    timing: "",
+    goal: "",
+    bedrooms: "",
+    pool: "",
+    reno_status: "",
+  };
   var step = 1;
 
   function showStep(n) {
@@ -160,7 +206,10 @@
     if (!panel) return;
     var nextBtn = panel.querySelector("[data-next]");
     if (!nextBtn) return;
-    var ok = step === 1 ? step1Ready() : step === 2 ? !!state.timing : true;
+    var ok = true;
+    if (step === 1) ok = step1Ready();
+    else if (step === 2) ok = !!state.timing;
+    /* step 3 optional — Next always on */
     nextBtn.disabled = !ok;
   }
 
@@ -173,6 +222,9 @@
     if (state.suburb) q.set("suburb", state.suburb);
     if (state.timing) q.set("timing", state.timing);
     if (state.goal) q.set("goal", state.goal);
+    if (state.bedrooms) q.set("bedrooms", state.bedrooms);
+    if (state.pool) q.set("pool", state.pool);
+    if (state.reno_status) q.set("reno_status", state.reno_status);
     return "enquire.html?" + q.toString();
   }
 
@@ -196,20 +248,20 @@
         c.setAttribute("aria-selected", c === chip ? "true" : "false");
       });
       updateNextEnabled();
-      if (step === 3 && state.goal) {
+      if (step === MAX_STEP && state.goal) {
         var link = panel.querySelector("[data-enquire]");
         if (link) link.setAttribute("href", buildEnquireUrl());
       }
       return;
     }
 
-    if (e.target.closest("[data-next]")) {
-      var suburbEl = document.getElementById("step-suburb");
-      if (suburbEl) state.suburb = suburbEl.value.trim();
+    if (e.target.closest("[data-next]") || e.target.closest("[data-skip]")) {
+      var suburbEl2 = document.getElementById("step-suburb");
+      if (suburbEl2) state.suburb = suburbEl2.value.trim();
       if (step === 1 && !step1Ready()) return;
       if (step === 1 && state.suburb && !state.area) state.area = "Other Australia";
       if (step === 2 && !state.timing) return;
-      showStep(Math.min(3, step + 1));
+      showStep(Math.min(MAX_STEP, step + 1));
       updateNextEnabled();
       return;
     }
