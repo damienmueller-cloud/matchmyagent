@@ -572,7 +572,7 @@ a:hover { color: var(--gold); }
 
 /* —— ElevenLabs convai widget: mobile clearance (QA re-fail 2026-09-19) ——
    Expanded panel still covered home stepper chips at ~390px.
-   Stronger clearance + stepper pad; widget stays agent_7301m2wa5jx7f218s1knqk6ykewg. */
+   Stronger clearance + stepper pad; widget stays agent_3201m3750m01ess9kv2r5kba1ggk. */
 :root {
   --convai-clearance: calc(7rem + env(safe-area-inset-bottom, 0px));
   --convai-panel-clearance: calc(18rem + env(safe-area-inset-bottom, 0px));
