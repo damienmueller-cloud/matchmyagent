@@ -3,7 +3,8 @@
 **GitHub Pages** serves from branch `gh-pages` (root). Custom domain: `matchmyagent.com.au` (CNAME in repo).
 
 ## ElevenLabs chatbot (live)
-- Agent id: `agent_7301m2wa5jx7f218s1knqk6ykewg`
+- Agent id: `agent_3201m3750m01ess9kv2r5kba1ggk`
+- Widget greeting: `override-first-message` on each embed (Elle agent allows first_message overrides; agent's own first_message is phone-worded)
 - Mode: voice + text; auth disabled (public widget)
 - Embed: `<elevenlabs-convai>` + `https://unpkg.com/@elevenlabs/convai-widget-embed` on every HTML page (once per page, before `</body>`)
 - No secrets / API keys in site files

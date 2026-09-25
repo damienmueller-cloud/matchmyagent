@@ -19,19 +19,19 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - **C3 superseded** — do not re-apply C3 as primary. C2 solid remains rejected.
 - Header `brand/logos/logo.png`, favicon / apple-touch / mark-512 / OG use concept A. MatchMyAgent branding only — no Premier.
 - Colours: navy `#182868` (+ mid `#2a3f88`, alt `#101860`), coral `#f85850` (accent; `--gold`/`--gold-light` aliased to coral family), cream `#f4f2eb`, ink `#1a1a19`.
-- Widget (`agent_7301m2wa5jx7f218s1knqk6ykewg`): logo avatar + shadow CSS + orb fallbacks force navy/coral (concept A); see note below.
+- Widget (Max `agent_7301…` (retired from widget 2026-09-25)): logo avatar + shadow CSS + orb fallbacks force navy/coral (concept A); see note below.
 - Concepts B–F + C2/C3 remain under `brand/logo-concepts/` for history only.
 
 ## Widget navy/coral force (concept A — 2026-09-19 ~18:57 AEST)
 - **Issue:** ElevenLabs widget still showed teal orb + black/white UI despite API styles + prior `override-config` (override was replacing server fetch).
-- **API:** Parent updating agent `agent_7301m2wa5jx7f218s1knqk6ykewg` avatar to type **image** + coral accent styles.
+- **API:** Parent updating agent Max `agent_7301…` (retired from widget 2026-09-25) avatar to type **image** + coral accent styles.
 - **HTML:** Every `<elevenlabs-convai>` now has `avatar-image-url="https://matchmyagent.com.au/brand/logos/avatar-mark.png"` + orb colour fallbacks; **`override-config` removed**.
 - **JS:** `js/secure-chat.js` (`?v=20260919w3`) sets avatar-image-url + orb colours, removes override-config, injects brand CSS into each element's `shadowRoot` (`--el-base*` / `--el-accent*`) via MutationObserver + 500/2000ms retries. Silent HTTP text-only kept (no injectHint / SSL banner).
 - **Asset:** `brand/logos/avatar-mark.png` shipped for Pages.
 
 ## Widget mobile fix (shipped this pass)
 - **QA fail:** ElevenLabs convai widget overlaid stepper chips + enquire textarea at ~390px width.
-- **Fix (CSS only):** `css/styles.css` — `--convai-clearance` + `body { padding-bottom }` with `env(safe-area-inset-bottom)`; extra clearance ≤430px. Widget kept (`agent_7301m2wa5jx7f218s1knqk6ykewg`).
+- **Fix (CSS only):** `css/styles.css` — `--convai-clearance` + `body { padding-bottom }` with `env(safe-area-inset-bottom)`; extra clearance ≤430px. Widget kept (Max `agent_7301…` (retired from widget 2026-09-25)).
 - Goal: stepper chips and enquire fields fully tappable on mobile.
 
 ## Apex / CNAME spot-check (2026-09-19 ~18:15 AEST)
@@ -55,7 +55,7 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - 3-step tap stepper (area → timeline → goal) → enquire prefill via `sessionStorage` + query params
 - Guides/councils as compact cards / expand-collapse (less essay prose on home)
 - FormSubmit enquire kept → `damienmueller@gmail.com`
-- ElevenLabs widget kept — agent `agent_7301m2wa5jx7f218s1knqk6ykewg`
+- ElevenLabs widget kept — agent Max `agent_7301…` (retired from widget 2026-09-25)
 - Mobile-first + LCP-aware (WEB_STANDARDS.md)
 - **Mobile widget clearance CSS shipped** (see above)
 
@@ -72,7 +72,7 @@ Folder: `/workspace/matchmyagent-godaddy/`
 - MVP: home, how-it-works, enquire (FormSubmit), about, privacy, thank-you, 404
 - Guides + councils preserved; site-wide nav + sticky call bar
 - Canonicals / sitemap / robots / llms / FormSubmit `_next` → **matchmyagent.com.au**
-- **ElevenLabs chat (live):** agent `agent_7301m2wa5jx7f218s1knqk6ykewg` + mobile clearance CSS
+- **ElevenLabs chat (live):** agent Max `agent_7301…` (retired from widget 2026-09-25) + mobile clearance CSS
 
 ## Gaps / TBD
 | Gap | Owner / note |
