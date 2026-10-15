@@ -1,4 +1,4 @@
-# MatchMyAgent
+# Match My Agent
 
 > Selling your house? We'll find you a local real estate agent. Free for sellers. Works anywhere in Australia. Tell us your suburb — we connect you with one local agent who can help you sell.
 
@@ -23,6 +23,8 @@ Key facts:
 - [All seller guides](https://matchmyagent.com.au/guides/)
 - [How to choose a selling agent](https://matchmyagent.com.au/guides/how-to-choose-a-selling-agent.html)
 - [What to ask at an appraisal](https://matchmyagent.com.au/guides/what-to-ask-at-an-appraisal.html)
+- [Signing a selling agency agreement in NSW: what to check first](https://matchmyagent.com.au/guides/agency-agreement-nsw-what-to-check.html)
+- [How to check a real estate agent's licence in NSW](https://matchmyagent.com.au/guides/check-real-estate-agent-licence-nsw.html)
 - [Selling costs and timeline](https://matchmyagent.com.au/guides/selling-costs-and-timeline-hunter.html)
 - [Auction vs private treaty](https://matchmyagent.com.au/guides/auction-vs-private-treaty-hunter.html)
 
