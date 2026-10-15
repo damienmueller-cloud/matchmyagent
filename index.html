@@ -24,7 +24,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="css/styles.css?v=20260923rodney1">
   <script type="application/ld+json">
 {
@@ -34,6 +35,74 @@
   "url": "https://matchmyagent.com.au/",
   "description": "Free for sellers. Tell us your suburb. We’ll find you a local real estate agent — anywhere in Australia.",
   "areaServed": "Australia"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://matchmyagent.com.au/#organization",
+  "name": "MatchMyAgent",
+  "alternateName": "Match My Agent",
+  "url": "https://matchmyagent.com.au/",
+  "logo": "https://matchmyagent.com.au/brand/logos/logo.png",
+  "description": "Selling your house? We’ll find you a local real estate agent. Free for sellers. Works anywhere in Australia."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://matchmyagent.com.au/#service",
+  "name": "MatchMyAgent",
+  "url": "https://matchmyagent.com.au/",
+  "image": "https://matchmyagent.com.au/brand/og-cover.jpg",
+  "logo": "https://matchmyagent.com.au/brand/logos/logo.png",
+  "parentOrganization": {
+    "@id": "https://matchmyagent.com.au/#organization"
+  },
+  "description": "Free agent matching for home sellers: tell us your suburb and we connect you with one local real estate agent who can help you sell.",
+  "serviceType": "Real estate agent matching for sellers",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Newcastle",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "New South Wales"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Lake Macquarie"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Maitland"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Cessnock"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Port Stephens"
+    },
+    {
+      "@type": "State",
+      "name": "New South Wales"
+    },
+    {
+      "@type": "Country",
+      "name": "Australia"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  },
+  "isAccessibleForFree": true
 }
 </script>
 </head>
@@ -50,7 +119,7 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="nav" id="site-nav">
       <a href="index.html">Home</a>
-      <a href="how-it-works.html">How it works</a>
+      <a href="how-it-works/">How it works</a>
       <a href="guides/">Guides</a>
       <a href="index.html#councils">Areas</a>
       <a href="about.html">About</a>
@@ -174,7 +243,7 @@
       <div class="card card-compact"><span class="step-num">2</span><h3>We find one agent</h3><p>A local agent who can help you sell.</p></div>
       <div class="card card-compact"><span class="step-num">3</span><h3>You stay in control</h3><p>Free for sellers. No fake rankings.</p></div>
     </div>
-    <p class="section-more"><a href="how-it-works.html">How it works →</a></p>
+    <p class="section-more"><a href="how-it-works/">How it works →</a></p>
   </div>
 </section>
 
@@ -238,7 +307,8 @@
     <div>
       <h3>Explore</h3>
       <ul>
-        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="how-it-works/">How it works</a></li>
+        <li><a href="faq/">FAQ</a></li>
         <li><a href="enquire.html">Find me an agent</a></li>
         <li><a href="guides/">Guides</a></li>
         <li><a href="about.html">About</a></li>

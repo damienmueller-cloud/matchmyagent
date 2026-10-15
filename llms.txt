@@ -1,19 +1,31 @@
-# MatchMyAgent — find a local real estate agent
+# MatchMyAgent
 
-> Selling your house? We’ll find you a local real estate agent. Free for sellers. Works anywhere in Australia. Tell us your suburb — we connect you with one agent who can help you sell.
+> Selling your house? We'll find you a local real estate agent. Free for sellers. Works anywhere in Australia. Tell us your suburb — we connect you with one local agent who can help you sell.
 
-- Intended site: https://matchmyagent.com.au/
-- Brand: MatchMyAgent (plain language for sellers; membership page for agents at /agents.html)
-- Chat: ElevenLabs conversational agent on site pages
-- Geography: Australia-wide from the start
+MatchMyAgent (also written "Match My Agent") is an agent-matching service for people selling a property in Australia. Example area pages cover Newcastle, Lake Macquarie, Maitland, Cessnock and Port Stephens in the Hunter region of NSW, but any Australian suburb can be used.
 
-## MVP pages
-- Home: https://matchmyagent.com.au/
-- How it works: https://matchmyagent.com.au/how-it-works.html
-- Find me an agent: https://matchmyagent.com.au/enquire.html
-- For agents (membership): https://matchmyagent.com.au/agents.html
-- About: https://matchmyagent.com.au/about.html
-- Privacy: https://matchmyagent.com.au/privacy.html
+Key facts:
+- Free for sellers. No payments on this site.
+- Three steps: tell us your suburb; we connect you with one local real estate agent; you decide.
+- Your enquiry may be shared with the one selected matched agent to introduce you. We do not sell personal information.
+- Not a property listing site. No fake agent rankings.
+- Agents can join a membership (software and workflow tools); a Verified Profile is free for eligible agents. Paying does not guarantee a lead.
+- Guides are general information, not a substitute for licensed advice.
+
+## Sellers
+- [How Match My Agent works](https://matchmyagent.com.au/how-it-works/): the three-step process in plain language
+- [Seller FAQ](https://matchmyagent.com.au/faq/): free for sellers, picking an agent, commission basics
+- [Find me an agent](https://matchmyagent.com.au/enquire.html): request a free match
+- [About](https://matchmyagent.com.au/about.html)
+- [Privacy](https://matchmyagent.com.au/privacy.html)
 
 ## Guides
-- Index: https://matchmyagent.com.au/guides/
+- [All seller guides](https://matchmyagent.com.au/guides/)
+- [How to choose a selling agent](https://matchmyagent.com.au/guides/how-to-choose-a-selling-agent.html)
+- [What to ask at an appraisal](https://matchmyagent.com.au/guides/what-to-ask-at-an-appraisal.html)
+- [Selling costs and timeline](https://matchmyagent.com.au/guides/selling-costs-and-timeline-hunter.html)
+- [Auction vs private treaty](https://matchmyagent.com.au/guides/auction-vs-private-treaty-hunter.html)
+
+## Agents
+- [For agents (membership)](https://matchmyagent.com.au/agents.html)
+- [Register interest](https://matchmyagent.com.au/register-interest.html)

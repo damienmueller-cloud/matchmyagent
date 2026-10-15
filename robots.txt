@@ -1,6 +1,32 @@
+# MatchMyAgent — all crawlers welcome, including AI search and answer engines.
 User-agent: *
 Allow: /
 
-# Intended production host (GoDaddy): matchmyagent.com.au
-# Domain purchase pending — GoDaddy 402 payment block is ops (Mia/Damien), not a site-build blocker.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 Sitemap: https://matchmyagent.com.au/sitemap.xml
