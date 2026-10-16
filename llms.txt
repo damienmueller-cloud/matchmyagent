@@ -1,13 +1,13 @@
 # Match My Agent
 
-> Selling your house? We'll find you a local real estate agent. Free for sellers. Works anywhere in Australia. Tell us your suburb — we connect you with one local agent who can help you sell.
+> Selling your house? We compare and vet local agents, then match you with the best agent in your area. Free for sellers. Works anywhere in Australia. Tell us your suburb to get started.
 
 MatchMyAgent (also written "Match My Agent") is an agent-matching service for people selling a property in Australia. Example area pages cover Newcastle, Lake Macquarie, Maitland, Cessnock and Port Stephens in the Hunter region of NSW, but any Australian suburb can be used.
 
 Key facts:
 - Free for sellers. No payments on this site.
-- Three steps: tell us your suburb; we connect you with one local real estate agent; you decide.
-- Your enquiry may be shared with the one selected matched agent to introduce you. We do not sell personal information.
+- Three steps: tell us your suburb; we compare and vet local agents and match you with the best agent in your area; you decide.
+- Your enquiry may be shared with your matched agent to introduce you. We do not sell personal information.
 - Not a property listing site. No fake agent rankings.
 - Agents can join a membership (software and workflow tools); a Verified Profile is free for eligible agents. Paying does not guarantee a lead.
 - Guides are general information, not a substitute for licensed advice.
